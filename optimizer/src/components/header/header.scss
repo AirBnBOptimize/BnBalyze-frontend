@@ -11,19 +11,24 @@ header{
         display:flex;
         justify-content: space-between;
         color:#FF5A5F;
+        a{
+            text-decoration:none;
+            color:#FF5A5F;
+        }
         .leftNav{
-            width:66%;
+            width:60%;
             text-align:left;
             margin-left:54px;
         }
         .rightNav{
-            width:33%;
+            width:40%;
             display:flex;
             justify-content: flex-end;
             margin-right:60px;
             h2{
                 margin-left:39px;
             }
+
         }
     }
 }
