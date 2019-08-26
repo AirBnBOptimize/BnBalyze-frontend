@@ -4,13 +4,15 @@ import './header.scss';
 const  Header= () => {
     return (
         <header>
-            <h1>BnBalyze</h1>
             <nav>
-                <div className="leftNav">Left Nav</div>
-                <div className="rightNav">Right Nav</div>
+                <div className="leftNav"><h2>BnBalyze</h2></div>
+                <div className="rightNav">
+                        <h2>How it Works</h2>
+                        <h2>Login</h2>
+                </div>
+
             </nav>
         </header>
       );
 }
- 
 export default Header;
