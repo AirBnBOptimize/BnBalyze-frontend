@@ -6,6 +6,7 @@ import Register from './components/Register/Register';
 import Login from './components/Login';
 import Home from "./components/home/Home.js";
 import PropertyInfo from "./components/propertyInfo/PropertyInfo.js";
+import HowItWorks from "./components/howitworks/HowItWorks.js";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       </Switch>
 
       <Route exact path="/" component={Home}/>
+      <Route path="/howitworks" component={HowItWorks}/>
       <Route exact path="/propertyInfo/:id" component={PropertyInfo}/>
     </div>
   )}
