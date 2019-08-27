@@ -24,6 +24,8 @@ const  Home= () => {
                     <FontAwesomeIcon icon={faHotel} className="icon" />
                 </div>
             </section>
+            {/* Bogus link to show to a property */}
+            <a href="/propertyInfo/42">Go to Property</a>
         </main>
 
      );

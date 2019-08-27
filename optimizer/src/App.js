@@ -7,15 +7,18 @@ import PropertyInfo from "./components/propertyInfo/PropertyInfo.js";
 
 function App() {
   return (
-    <div className="App"><Switch><Route path="/login"
+    <div className="App">
+      <Switch>
+        <Route path="/login"
         render={(props) => {
           return(<Header  {...props} loginLink="Register"/>)
-        }}
-        /> 
-        <Route component={Header}/></Switch>
+        }}/> 
+        <Route component={Header}/>
+      </Switch>
       
-      <Route exact path="/" component={Home}/></div>
-    
+      <Route exact path="/" component={Home}/>
+      <Route exact path="/propertyInfo/:id" component={PropertyInfo}/>
+    </div>
   );
 }
 
