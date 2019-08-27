@@ -6,18 +6,15 @@ import Home from "./components/home/Home.js";
 
 function App() {
   return (
-    <div className="App">
-      <Switch>
-        <Route path="/login"
+    <div className="App"><Switch><Route path="/login"
         render={(props) => {
           return(<Header  {...props} loginLink="Register"/>)
         }}
         /> 
-        <Route component={Header}/>
-      </Switch>
-      <Route exact path="/" component={Home}/>
-
-    </div>
+        <Route component={Header}/></Switch>
+      
+      <Route exact path="/" component={Home}/></div>
+    
   );
 }
 
