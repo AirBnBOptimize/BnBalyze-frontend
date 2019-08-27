@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import PropertyCard from "./PropertyCard";
+import Property from "./Property";
 import { Container } from 'semantic-ui-react'
 
 export default function PropertyList() {
@@ -27,7 +27,7 @@ export default function PropertyList() {
           {/* Need to ensure props is mapping acrossing properly */}
           {property.map(id => (   
             <div className="cardStyle">
-            <PropertyCard
+            <Property
               key={id}
               image={id.image}
               neighborhood={id.neighborhood}
