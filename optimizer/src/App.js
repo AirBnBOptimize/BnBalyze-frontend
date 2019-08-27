@@ -17,9 +17,10 @@ function App() {
         }}
         /> 
         <Route component={Header}/>
-      
       </Switch>
+
       <Route exact path="/" component={Home}/>
+      <Route exact path="/propertyInfo/:id" component={PropertyInfo}/>
     </div>
   )}
 
