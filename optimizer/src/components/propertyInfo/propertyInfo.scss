@@ -20,18 +20,28 @@
         display:flex;
         justify-content: center;
         flex-wrap: wrap;
-        width:70%;
+        width:80%;
         margin:0px auto;
         text-align:left;
         & div:nth-child(odd){
-            width:30%;
+            width:35%;
             padding-left:30px;
         }
         & div:nth-child(even){
-            width:60%;
+            width:55%;
         }
         div{
             margin:8px 0px;
+        }
+    }
+    .checks{
+        display:flex;
+        justify-content:space-evenly;
+        width:80%;
+        margin:0px auto;
+        padding:20px 0px;
+        div{
+            width:50%;
         }
     }
 }
