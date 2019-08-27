@@ -9,7 +9,7 @@ export default function PropertyList() {
   useEffect(() => {
        axios
     // Need to add the API link
-        .get(``)
+        .get(`./data.js`)
         .then(response => {
          //Need to validate API calling data properly
           setProperty(response.data);
@@ -30,13 +30,16 @@ export default function PropertyList() {
             <PropertyCard
               key={id}
               image={id.image}
-              type={id.type}
-              beds={id.beds}
+              neighborhood={id.neighborhood}
+              room_type={id.room_type}
+              accommodates={id.accommodates}
+              bedrooms={id.bedrooms}
+              bathroom={id.bathroom}
+              reviews={id.reviews}
+              wifi={id.wifi}
+              cable_tv={id.cable_tv}
+              washer={id.washer}
               kitchen={id.kitchen}
-              name={id.name}
-              cost={id.cost}
-              totalcost={id.totalcost}
-              rating={id.rating}
             />
             </div>
             ))}

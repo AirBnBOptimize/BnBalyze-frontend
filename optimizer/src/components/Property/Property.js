@@ -6,15 +6,22 @@ const Property = (props) => {
     <Card>
     <Image src={props.image} wrapped ui={false} />
     <Card.Content>
-      <Card.Meta>{props.type} · {props.beds} · {props.kitchen}</Card.Meta>
       <Card.Header>{props.name}</Card.Header>
-      <Card.Description>{props.cost}/night · {props.totalcost}</Card.Description>
+      <Card.Description>{props.neighborhood}</Card.Description>
+      <Card.Description>{props.room_type}</Card.Description>
+      <Card.Description>{props.accommodates}</Card.Description>
+      <Card.Description>{props.bedrooms}</Card.Description>
+      <Card.Description>{props.bathrooms}</Card.Description>
+      <Card.Description>{props.wifi}</Card.Description>
+      <Card.Description>{props.cable_tv}</Card.Description>
+      <Card.Description>{props.washer}</Card.Description>
+      <Card.Description>{props.kitchen}</Card.Description>
     </Card.Content>
     <Card.Content extra>
       <a>
         {/* App Rating Section */}
         <Icon name='star' />
-        Rating {props.rating}
+        Rating {props.reviews}
       </a>
     </Card.Content>
     </Card>
