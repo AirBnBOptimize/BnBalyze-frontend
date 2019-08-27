@@ -4,8 +4,35 @@
     border-radius: 20px;
     width: 853px;
     margin:20px auto;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    color:white;
+    .propertyImage {
+        img{
+        margin:20px 0px;
+        border-radius: 15px;
+        }
+    }
+    .infoLayout{
+        display:flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width:70%;
+        margin:0px auto;
+        text-align:left;
+        & div:nth-child(odd){
+            width:30%;
+            padding-left:30px;
+        }
+        & div:nth-child(even){
+            width:60%;
+        }
+        div{
+            margin:8px 0px;
+        }
+    }
 }
 
-.propertyImage img{
-    margin:20px 0px;
-}
