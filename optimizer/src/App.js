@@ -3,6 +3,8 @@ import { Route, Switch } from 'react-router-dom';
 
 import './App.sass';
 import Register from './components/Register/Register';
+import Property from './components/Property';
+import PropertyList from './components/PropertyList';
 
 function App() {
   return (
