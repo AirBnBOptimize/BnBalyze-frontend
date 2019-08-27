@@ -3,6 +3,7 @@ import './App.css';
 import {Switch, Route} from 'react-router-dom';
 import Header from "./components/header/Header.js";
 import Home from "./components/home/Home.js";
+import PropertyInfo from "./components/propertyInfo/PropertyInfo.js";
 
 function App() {
   return (
