@@ -16,7 +16,7 @@ function App() {
           render={(props) => {
             // console.log("Button",props);
             if(localStorage.getItem('token')){
-              return(<Header  {...props} loginLink="/logout" loginText="Logout" />)
+              return(<Header  {...props} loginLink="/logout" loginText="Logout"/>)
             } else if(props.location.pathname==="/login"){
               return(<Header  {...props} loginLink="/new-user" loginText="Register" />)
             } else {
