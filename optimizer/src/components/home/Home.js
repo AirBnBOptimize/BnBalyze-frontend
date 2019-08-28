@@ -4,7 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDollarSign, faHotel } from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom';
 
-const  Home= () => {
+const  Home= (props) => {
+    console.log(props);
+    if(props.match.path==="/logout"){
+        localStorage.setItem('token','')
+        console.log("NoToken",localStorage.getItem('token'));
+    };
+    
     return ( 
         <main>
             <section className="topContent">
