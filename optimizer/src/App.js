@@ -7,6 +7,7 @@ import Login from './components/login/Login';
 import Home from "./components/home/Home.js";
 import PropertyInfo from "./components/propertyInfo/PropertyInfo.js";
 import HowItWorks from "./components/howitworks/HowItWorks.js";
+import PredictPropertyPrice from './components/predictPropertyPrice/PredictPropertyPrice';
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
         <Route path="/howitworks" component={HowItWorks} />
         <Route exact path="/propertyInfo/:id" component={PropertyInfo} />
       </Switch>
+
+      {/* temp for testing */}
+      <PredictPropertyPrice/>
     </div>
   )
 }
