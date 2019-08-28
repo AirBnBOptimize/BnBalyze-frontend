@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect,useState} from 'react';
 import './propertyInfo.scss';
 import axios from 'axios';
 
@@ -54,18 +54,29 @@ const roomType=(room)=>{
     }
     return lookup[room];
 }
+    const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJ1c2VybmFtZSI6IkFudGhvbnkxIiwiaWF0IjoxNTY3MDA5NTcwLCJleHAiOjE1NjcwOTU5NzB9.gSKEmTp3MVWILSbhEh99TSWa9aSgmGksiFRKcKAS-dg";
 
-    console.log("PI Props",props);
-    const [property,setProperty]=useState(data);
-    // axios
-    // .get('***{props.match.params.id}')
-    // .then(res => {
-    // })
-    // .catch(error => {
-    //     console.error('Server Error', error);
-    // });
-    // setProperty(data);
-    
+
+    const [property,setProperty]=useState();
+
+    useEffect(()=>{
+        console.log("PI Props", props,props.match.params.id);
+        // axiosWithAuth
+        // localStorage.getItem(‘token’)
+        axios
+        .get('https://bnbalyze.herokuapp.com/properties',{headers: {Authorization:token}})
+        .then(res => {
+            console.log("DATA",res.data[props.match.params.id]);
+            setProperty(res.data[props.match.params.id]);
+        })
+        .catch(err => {
+            console.error('Server Error', err);
+            console.log(err);
+        });
+    },[props]);
+
+    if (!property){return "Loading"};
+
     return ( 
         <div className="propertyInfo">
             <div className="propertyBox">
@@ -74,19 +85,16 @@ const roomType=(room)=>{
                 </div>
                 <div className="infoLayout">
                     <div>Neighborhood:</div>
-                    <div>{neighborhood(property.neighborhood)}</div>
+                    <div>{property.neighborhood}</div>
                     
                     <div>Room Type:</div>
-                    <div>{roomType(property.room_type)}</div>
+                    <div>{property.room_type}</div>
                     
                     <div>Accomodates:</div>
                     <div>{property.accommodates}</div>
 
                     <div>Bedrooms:</div>
                     <div>{property.bedrooms}</div>
-                    
-                    {/* <div>Bathrooms:</div>
-                    <div>{property.bathrooms}</div> */}
                     
                     <div># of Reviews:</div>
                     <div>{property.number_of_reviews}</div>
