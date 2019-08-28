@@ -5,7 +5,6 @@ export default [
       room_type: "Private",
       accommodates: 8,
       bedrooms: 3,
-      bathrooms: 4,
       number_of_reviews: 30,
       wifi: 1,
       cable_tv: 0,

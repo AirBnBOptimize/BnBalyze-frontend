@@ -8,8 +8,7 @@ export default function PropertyList() {
  
   useEffect(() => {
        axios
-    // Need to add the API link
-        .get(`./data.js`)
+        .get(`https://bnbalyze.herokuapp.com/properties`, {headers: {Authorization: localStorage.getItem('token')}})
         .then(response => {
          //Need to validate API calling data properly
           setProperty(response.data);
@@ -34,7 +33,6 @@ export default function PropertyList() {
               room_type={id.room_type}
               accommodates={id.accommodates}
               bedrooms={id.bedrooms}
-              bathroom={id.bathroom}
               reviews={id.reviews}
               wifi={id.wifi}
               cable_tv={id.cable_tv}

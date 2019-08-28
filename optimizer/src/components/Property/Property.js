@@ -5,7 +5,7 @@ const Property = (props) => {
     return (
     <Card>
     <Image src={props.image} wrapped ui={false} />
-    <Card.Content>
+    <Card.Content className="property-card">
       <Card.Header>{props.name}</Card.Header>
       <Card.Description>{props.neighborhood}</Card.Description>
       <Card.Description>{props.room_type}</Card.Description>
