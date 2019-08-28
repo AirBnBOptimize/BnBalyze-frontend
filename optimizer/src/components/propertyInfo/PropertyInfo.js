@@ -15,28 +15,44 @@ const PropertyInfo = (props) => {
     , 'kitchen':1};
 
 const neighborhood=(hood)=>{
-    switch(hood){
-        case 1:return 'Friedrichshain-Kreuzberg';
-        case 2:return 'Mitte';
-        case 3:return 'Pankow';
-        case 4:return 'Neukölln';
-        case 5:return 'Charlottenburg-Wilm.';
-        case 6:return 'Tempelhof - Schöneberg';
-        case 7:return 'Lichtenberg';
-        case 8:return 'Treptow - Köpenick';
-        case 9:return 'Steglitz - Zehlendorf';
-        case 10:return 'Reinickendorf';
-        case 11:return 'Marzahn - Hellersdorf';
-        case 12:return 'Spandau';
-    }
+    const lookup={'Friedrichshain-Kreuzberg': 1,
+    'Mitte': 2,
+    'Pankow': 3,
+    'Neukölln': 4,
+    'Charlottenburg-Wilm.': 5,
+    'Tempelhof - Schöneberg': 6,
+    'Lichtenberg': 7,
+    'Treptow - Köpenick': 8,
+    'Steglitz - Zehlendorf': 9,
+    'Reinickendorf': 10,
+    'Marzahn - Hellersdorf':11,
+    'Spandau': 12,
+    1:'Friedrichshain-Kreuzberg',
+    2:'Mitte',
+    3:'Pankow',
+    4:'Neukölln',
+    5:'Charlottenburg-Wilm.',
+    6:'Tempelhof - Schöneberg',
+    7:'Lichtenberg',
+    8:'Treptow, - Köpenick',
+    9:'Steglitz, - Zehlendorf',
+    10:'Reinicken,dorf',
+    11:'Marzahn - Hellersdorf',
+    12:'Spandau'}
+    
+    return lookup[hood];
 }
 
 const roomType=(room)=>{
-    switch(room){
-        case 1:return 'Entire home/apt';
-        case 2:return 'Private room';
-        case 3:return 'Shared room';
+    const lookup={
+        1:'Entire home/apt',
+        2:'Private room',
+        3:'Shared room',
+        'Entire home/apt':1,
+        'Private room':2,
+        'Shared room':3
     }
+    return lookup[room];
 }
 
     console.log("PI Props",props);
@@ -69,8 +85,8 @@ const roomType=(room)=>{
                     <div>Bedrooms:</div>
                     <div>{property.bedrooms}</div>
                     
-                    <div>Bathrooms:</div>
-                    <div>{property.bathrooms}</div>
+                    {/* <div>Bathrooms:</div>
+                    <div>{property.bathrooms}</div> */}
                     
                     <div># of Reviews:</div>
                     <div>{property.number_of_reviews}</div>
