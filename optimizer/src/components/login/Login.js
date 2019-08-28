@@ -22,7 +22,8 @@ export default function Login() {
 
         // to get the token from the server
         axios
-            .post("https://airbnboptimalprice-backend.herokuapp.com/auth/login", credentials)
+            // .post("https://airbnboptimalprice-backend.herokuapp.com/auth/login", credentials)
+            .post("https://bnbalyze.herokuapp.com/auth/login", credentials)
 
             // to save the token if the request is successfull 
             .then(response => {
