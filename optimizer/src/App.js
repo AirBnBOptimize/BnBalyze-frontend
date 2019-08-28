@@ -6,6 +6,7 @@ import Register from './components/Register/Register';
 import Login from './components/login/Login';
 import Home from "./components/home/Home.js";
 import PropertyInfo from "./components/propertyInfo/PropertyInfo.js";
+import PropertyList from "./components/PropertyList/PropertyList.js";
 
 function App() {;
 
@@ -33,7 +34,7 @@ function App() {;
         <Route component={Header}/>
       
       </Switch>
-
+      <PropertyList/>
       <Route exact path="/" component={Home}/>
 
     </div>

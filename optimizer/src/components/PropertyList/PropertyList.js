@@ -10,7 +10,6 @@ export default function PropertyList() {
        axios
         .get(`https://bnbalyze.herokuapp.com/properties`, {headers: {Authorization: localStorage.getItem('token')}})
         .then(response => {
-         //Need to validate API calling data properly
           setProperty(response.data);
           console.log(response.data);
         })
@@ -23,7 +22,6 @@ export default function PropertyList() {
   return (
     <section className="property-list grid-view">
       <Container className="container">
-          {/* Need to ensure props is mapping acrossing properly */}
           {property.map(id => (   
             <div className="cardStyle">
             <Property
