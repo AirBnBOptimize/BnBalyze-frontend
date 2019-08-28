@@ -32,7 +32,7 @@ function App() {;
       }
       /> 
 
-        <Route component={Header}/>
+      <Route component={Header}/>
       </Switch>
 
       <Route exact path="/" component={Home}/>
@@ -41,10 +41,20 @@ function App() {;
 
 
       {/* temp for testing */}
-      <PredictPropertyPrice/>
-      <Register/>
-      
+      {/* <PredictPropertyPrice/>
+      <Register/> */}
+    
+{/* 
+      // double renders, temp commented out
+      <Route component={Header} />
+      <Switch>
+        <Route path="/login" render={props => <Header {...props} loginLink="Register" />} />
+        <Route exact path="/" component={Home} />
+        <Route path="/howitworks" component={HowItWorks} />
+        <Route exact path="/propertyInfo/:id" component={PropertyInfo} />
+      </Switch> */}
     </div>
-  )}
+  )
+}
 
 export default App;

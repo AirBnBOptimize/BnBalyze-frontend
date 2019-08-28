@@ -12,8 +12,8 @@ const HowItWorks = () => {
                     <FontAwesomeIcon icon={faCalculator} className="icon" />
                 </div>
                 <div className="blurb">
-                    <h2>Main Reason</h2>
-                    <p>“By the bye, Charles, are you really serious in meditating a dance at Netherfield? I would advise you, before you determine on it, to consult the wishes of the present party; I am much mistaken if there are not some among us to whom a ball would be rather a punishment than a pleasure.”</p>
+                    <h2>Deep Data Integration</h2>
+                    <p>We use Machine learning and up to date Data Science techniques to clean AirBnb's database of over 17,000 records to bring your the most accurate data possible.</p>
                 </div>
             </div>
             <div className="roiContent">
@@ -22,7 +22,7 @@ const HowItWorks = () => {
                 </div>
                 <div className="blurb">
                     <h2>Optimize ROI%</h2>
-                    <p>“If you mean Darcy,” cried her brother, “he may go to bed, if he chooses, before it begins--but as for the ball, it is quite a settled thing; and as soon as Nicholls has made white soup enough, I shall send round my cards.”</p>
+                    <p>Getting the most value from your property is an important task. Our prediction model will help you get top dollar for your rental no matter the neighborhood or time of year</p>
                 </div>
 
             </div>
@@ -32,7 +32,7 @@ const HowItWorks = () => {
                 </div>
                 <div className="blurb">
                     <h2>Increase Occupancy</h2>
-                    <p>“I should like balls infinitely better,” she replied, “if they were carried on in a different manner; but there is something insufferably tedious in the usual process of such a meeting. It would surely be much more rational if conversation instead of dancing were made the order of the day.”</p>    
+                    <p>Having a competitive price for your area can be the difference between getting that booking or your listing sitting empty. Help your potential customers see the value in your property with BnBalyze</p>    
                 </div>       
 
             </div>
