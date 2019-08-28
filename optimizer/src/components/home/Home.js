@@ -4,7 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDollarSign, faHotel } from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom';
 
-const  Home= () => {
+const  Home= (props) => {
+    console.log("Home Props",props,localStorage.getItem('token'));
+    if(props.match.path==="/logout"){
+        localStorage.setItem('token','')
+        console.log("NoToken",localStorage.getItem('token'));
+    };
+    
     return ( 
         <main>
             <section className="topContent">
@@ -12,7 +18,7 @@ const  Home= () => {
                     <h1>Analyze your BnB Listings<br/>with pinpoint geographic analytics</h1>
                 </div>
                 <div className="startButton">
-                    Start Today
+                <Link to="/new-user">Start Today</Link>
                 </div>
             </section>
             <section className="bottomContent">
@@ -26,7 +32,7 @@ const  Home= () => {
                 </div>
             </section>
                         {/* Bogus link to show to a property */}
-                        <a href="/propertyInfo/42">Test Link: Go to Property</a>
+                        <a href="/propertyInfo/1">Test Link: Go to Property</a>
         </main>
 
      );
