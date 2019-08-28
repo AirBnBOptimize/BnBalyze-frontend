@@ -33,23 +33,31 @@ export default function PredictPropertyPrice() {
             <label>
                 Neighborhood
                 <select value={propertyPrediction.neigborhood} onChange={handleChange}>
-                    <option value="neigborhood1"> Neighborhood 1 </option>
-                    <option value="neigborhood2"> Neighborhood 2 </option>
-                    <option value="neigborhood3"> Neighborhood 3 </option>
-                    <option value="neigborhood4"> Neighborhood 4 </option>
+                    <option value='1'> Friedrichshain-Kreuzberg</option>
+                    <option value="2"> Mitte </option>
+                    <option value="3"> Pankow </option>
+                    <option value="4"> Neukölln </option>
+                    <option value="5"> Charlottenburg-Wilm </option>
+                    <option value="6"> Tempelhof - Schöneberg </option>
+                    <option value="7"> Lichtenberg </option>
+                    <option value="8"> Treptow - Köpenick </option>
+                    <option value="9"> Steglitz - Zehlendorf </option>
+                    <option value="10"> Reinickendorf </option>
+                    <option value="11"> Marzahn - Hellersdorf </option>
+                    <option value="12"> Spandau </option>
+                   
                 </select>
             </label>
-           
-            Zipcode
-            <input type='number' name='zipcode' value={propertyPrediction.zipcode} onChange={handleChange} />
-          
+
+            {/* room_type = {'Entire home/apt': 1, 'Private room': 2, 'Shared room': 3} */}
+ 
             Room type
             
             Private
             Shared
             Entire Home/Apartment
 
-            Number of People 
+            Accommodates
             <input type='number' name='numberOfPeople' value={propertyPrediction.numberOfPeople} onChange={handleChange} />
 
             Number of Bedrooms 

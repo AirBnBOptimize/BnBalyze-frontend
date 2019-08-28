@@ -49,7 +49,9 @@ export default function Login() {
             <input type='password' name='password' value={credentials.password} onChange={handleChange} />
 
             {/* link to signup */}
-            <button> <h3> No Account? Sign Up </h3> </button>
+            <button> Login </button>
+            {/* link to signup */}
+            <h3> No Account? Sign Up </h3>
 
 
         </form>
