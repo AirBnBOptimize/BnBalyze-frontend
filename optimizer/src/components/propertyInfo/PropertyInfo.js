@@ -1,6 +1,8 @@
 import React, {useEffect,useState} from 'react';
 import './propertyInfo.scss';
 import axios from 'axios';
+import {neighborhood} from '../../utilities/neighborhood.js';
+import {roomType} from '../../utilities/neighborhood.js';
 
 const PropertyInfo = (props) => {
     const data={'neighborhood': 2
@@ -14,46 +16,6 @@ const PropertyInfo = (props) => {
     , 'washer':0
     , 'kitchen':1};
 
-const neighborhood=(hood)=>{
-    const lookup={'Friedrichshain-Kreuzberg': 1,
-    'Mitte': 2,
-    'Pankow': 3,
-    'Neukölln': 4,
-    'Charlottenburg-Wilm.': 5,
-    'Tempelhof - Schöneberg': 6,
-    'Lichtenberg': 7,
-    'Treptow - Köpenick': 8,
-    'Steglitz - Zehlendorf': 9,
-    'Reinickendorf': 10,
-    'Marzahn - Hellersdorf':11,
-    'Spandau': 12,
-    1:'Friedrichshain-Kreuzberg',
-    2:'Mitte',
-    3:'Pankow',
-    4:'Neukölln',
-    5:'Charlottenburg-Wilm.',
-    6:'Tempelhof - Schöneberg',
-    7:'Lichtenberg',
-    8:'Treptow, - Köpenick',
-    9:'Steglitz, - Zehlendorf',
-    10:'Reinicken,dorf',
-    11:'Marzahn - Hellersdorf',
-    12:'Spandau'}
-    
-    return lookup[hood];
-}
-
-const roomType=(room)=>{
-    const lookup={
-        1:'Entire home/apt',
-        2:'Private room',
-        3:'Shared room',
-        'Entire home/apt':1,
-        'Private room':2,
-        'Shared room':3
-    }
-    return lookup[room];
-}
     const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJ1c2VybmFtZSI6IkFudGhvbnkxIiwiaWF0IjoxNTY3MDA5NTcwLCJleHAiOjE1NjcwOTU5NzB9.gSKEmTp3MVWILSbhEh99TSWa9aSgmGksiFRKcKAS-dg";
 
 

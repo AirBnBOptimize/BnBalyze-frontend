@@ -14,7 +14,7 @@ function App() {
       <Switch>
         <Route
           render={(props) => {
-            console.log("Button",props);
+            // console.log("Button",props);
             if(localStorage.getItem('token')){
               return(<Header  {...props} loginLink="/logout" loginText="Logout" />)
             } else if(props.location.pathname==="/login"){
