@@ -7,7 +7,7 @@ import Login from './components/login/Login';
 import Home from "./components/home/Home.js";
 import PropertyInfo from "./components/propertyInfo/PropertyInfo.js";
 import HowItWorks from "./components/howitworks/HowItWorks.js";
-console.log("Token",localStorage.getItem('token'));
+import PredictPropertyPrice from './components/predictPropertyPrice/PredictPropertyPrice';
 function App() {
   return (
     <div className="App">
@@ -32,6 +32,11 @@ function App() {
         <Route path="/login" component={Login} />
         <Route path="/howitworks" component={HowItWorks} />
         <Route exact path="/propertyInfo/:id" component={PropertyInfo} />
+
+      </Switch>
+      {/* temp for testing */}
+      <PredictPropertyPrice/>
+
     </div>
   )
 }
