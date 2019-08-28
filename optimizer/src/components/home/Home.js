@@ -26,7 +26,7 @@ const  Home= () => {
                 </div>
             </section>
                         {/* Bogus link to show to a property */}
-                        <a href="/propertyInfo/42">Test Link: Go to Property</a>
+                        <a href="/propertyInfo/1">Test Link: Go to Property</a>
         </main>
 
      );
