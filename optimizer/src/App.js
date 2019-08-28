@@ -33,7 +33,7 @@ function App() {
         <Route path="/howitworks" component={HowItWorks} />
         <Route exact path="/propertyInfo/:id" component={PropertyInfo} />
 
-      </Switch>
+
       {/* temp for testing */}
       <PredictPropertyPrice/>
 
