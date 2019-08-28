@@ -43,11 +43,16 @@ export default function Login () {
             
             <h3> Please login </h3>
 
+            <div className='username-password'>
+
             Username 
             <input type='text' name='username' value={credentials.username} onChange={handleChange} />
 
             Password 
             <input type='password' name='password' value={credentials.password} onChange={handleChange} />
+
+            </div>
+
 
             {/* link to signup */}
             <button> <h3> No Account? Sign Up </h3> </button>
