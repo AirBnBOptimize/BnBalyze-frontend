@@ -19,7 +19,7 @@ const  Home= () => {
                     Optimize ROI%<br/>
                     <FontAwesomeIcon icon={faDollarSign} className="icon" />
                 </div>
-                <div className="occuancy">
+                <div className="occpuancy">
                     Increase Occupancy<br/>
                     <FontAwesomeIcon icon={faHotel} className="icon" />
                 </div>
