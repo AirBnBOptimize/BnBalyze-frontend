@@ -1,7 +1,8 @@
 import React from 'react';
 import './home.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDollarSign, faHotel } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDollarSign, faHotel } from '@fortawesome/free-solid-svg-icons';
+import {Link} from 'react-router-dom';
 
 const  Home= () => {
     return ( 
@@ -16,14 +17,16 @@ const  Home= () => {
             </section>
             <section className="bottomContent">
                 <div className="roi">
-                    Optimize ROI%<br/>
-                    <FontAwesomeIcon icon={faDollarSign} className="icon" />
+                    <Link to="/howitworks">Optimize ROI%<br/>
+                    <FontAwesomeIcon icon={faDollarSign} className="icon" /></Link>
                 </div>
-                <div className="occuancy">
-                    Increase Occupancy<br/>
-                    <FontAwesomeIcon icon={faHotel} className="icon" />
+                <div className="occpuancy">
+                    <Link to="/howitworks">Increase Occupancy<br/>
+                    <FontAwesomeIcon icon={faHotel} className="icon" /></Link>
                 </div>
             </section>
+                        {/* Bogus link to show to a property */}
+                        <a href="/propertyInfo/42">Test Link: Go to Property</a>
         </main>
 
      );

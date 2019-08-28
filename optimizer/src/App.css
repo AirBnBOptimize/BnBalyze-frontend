@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+<<<<<<< HEAD
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -27,3 +28,31 @@
 }
 
 
+=======
+/* Login css */
+.login-form{
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+  background-color: #FF5A5F;
+  color: white;
+  font-family: Raleway;
+}
+
+.login-form input{
+  box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+}
+
+.login-form button{
+  background-color: #FF5A5F;
+  border: none;
+  width: 7rem;
+
+  color: white;
+  font-family: Raleway;
+}
+>>>>>>> 04ced174fdc5ad9acdb190fae41b6de440c71065
