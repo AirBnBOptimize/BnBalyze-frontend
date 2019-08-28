@@ -13,8 +13,9 @@ function App() {
     <div className="App">
       <Route component={Header} />
       <Switch>
-        <Route path="/login" render={props => <Header {...props} loginLink="Register" />} />
         <Route exact path="/" component={Home} />
+        <Route exact path='/new-user' component={Register} />
+        <Route path="/login" component={Login} />
         <Route path="/howitworks" component={HowItWorks} />
         <Route exact path="/propertyInfo/:id" component={PropertyInfo} />
       </Switch>

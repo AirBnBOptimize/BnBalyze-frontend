@@ -17,8 +17,14 @@ export default function Register() {
     const register = async evt => {
         evt.preventDefault();
         try {
-            let { data } = await axios.post('https://airbnboptimalprice-backend.herokuapp.com/auth/register', credentials);
-            localStorage.setItem('authToken', data.payload);
+            let headers = {
+                headers: {
+                    Authorization: localStorage.getItem('token')
+                }
+            };
+            let res = await axios.post('https://airbnboptimalprice-backend.herokuapp.com/auth/register', credentials, headers);
+            localStorage.setItem('token', res.data.payload);
+            console.log(res);
         } catch (err) {
             console.error(err.message);
         }
