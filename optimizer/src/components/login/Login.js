@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './login.css';
 
@@ -48,11 +49,13 @@ export default function Login() {
             Password
             <input type='password' name='password' value={credentials.password} onChange={handleChange} />
 
-            {/* link to signup */}
             <button> Login </button>
-            {/* link to signup */}
-            <h3> No Account? Sign Up </h3>
-
+           
+           {/* link to register */}
+          <div className='redirect'>
+            No Account?
+            <Link to="/register">Sign In</Link>
+            </div>
 
         </form>
     )
