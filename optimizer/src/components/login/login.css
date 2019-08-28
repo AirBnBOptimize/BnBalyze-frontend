@@ -1,5 +1,6 @@
 
 .login-form{
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
 
@@ -40,3 +41,46 @@
   font-size: 1.5rem;
 }
 
+=======
+    display: flex;
+    flex-direction: column;
+  
+    margin: 0 auto;
+    margin-top: 20%;
+    width: 50%; 
+  
+    align-items: center;
+    justify-content: center;
+   
+    background-color: #FF5A5F;
+    color: white;
+    font-family: Raleway;
+    font-size: 2rem;
+  }
+  
+  .username-password{
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      font-size: 1.5rem;
+  }
+  
+  .login-form input{
+    box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    width: 15rem;
+    height: 1.5rem;
+  }
+  
+  .login-form button{
+    background-color: #FF5A5F;
+    border: none;
+    width: 15rem;
+  
+    color: white;
+    font-family: Raleway;
+    font-size: 1.5rem;
+  }
+  
+  
+>>>>>>> 67b71cb44d5e11d2aa0ac806f2fe3bb3d730c8cb
