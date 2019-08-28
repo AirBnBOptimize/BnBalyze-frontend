@@ -11,19 +11,15 @@ import HowItWorks from "./components/howitworks/HowItWorks.js";
 function App() {
   return (
     <div className="App">
+      <Route component={Header} />
       <Switch>
-      <Route path="/login"
-        render={(props) => {
-          return(<Header  {...props} loginLink="Register"/>)
-        }}
-        /> 
-        <Route component={Header}/>
+        <Route path="/login" render={props => <Header {...props} loginLink="Register" />} />
+        <Route exact path="/" component={Home} />
+        <Route path="/howitworks" component={HowItWorks} />
+        <Route exact path="/propertyInfo/:id" component={PropertyInfo} />
       </Switch>
-
-      <Route exact path="/" component={Home}/>
-      <Route path="/howitworks" component={HowItWorks}/>
-      <Route exact path="/propertyInfo/:id" component={PropertyInfo}/>
     </div>
-  )}
+  )
+}
 
 export default App;

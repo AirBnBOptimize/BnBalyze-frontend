@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-import './Register.sass';
+import './Register.scss';
 
 export default function Register() {
     const [credentials, setCredentials] = useState({
