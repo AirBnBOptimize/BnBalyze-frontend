@@ -8,6 +8,7 @@ import Home from "./components/home/Home.js";
 import PropertyInfo from "./components/propertyInfo/PropertyInfo.js";
 import HowItWorks from "./components/howitworks/HowItWorks.js";
 import PredictPropertyPrice from './components/predictPropertyPrice/PredictPropertyPrice';
+import WelcomePage from './components/welcomePage/WelcomePage.js';
 function App() {
   return (
     <div className="App">
@@ -31,6 +32,7 @@ function App() {
         <Route exact path='/new-user' component={Register} />
         <Route path="/login" component={Login} />
         <Route path="/howitworks" component={HowItWorks} />
+        <Route path="/welcome" component={WelcomePage} />
         <Route exact path="/propertyInfo/:id" component={PropertyInfo} />
 
 
