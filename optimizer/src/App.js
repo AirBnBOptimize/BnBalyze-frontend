@@ -11,6 +11,7 @@ import PropertyList from "./components/propertyList/PropertyList.js";
 import WelcomePage from './components/welcomePage/WelcomePage.js';
 import AddPropertyForm from './components/addPropertyForm/AddPropertyForm.js';
 
+
 function App() {
   return (
     <div className="App">
@@ -35,9 +36,9 @@ function App() {
         <Route exact path='/new-user' component={Register} />
         <Route path="/login" component={Login} />
         <Route path="/howitworks" component={HowItWorks} />
-        <Route path="/welcome" component={WelcomePage} />
+        {/* <Route path="/welcome" component={WelcomePage} /> */}
         <Route exact path="/propertyInfo/:id" component={PropertyInfo} />
-        <Route exact path="/properties" component={PropertyList} />
+        {/* <Route exact path="/properties" component={PropertyList} /> */}
         <Route exact path="/addproperty" component={AddPropertyForm} />
 
     </div>

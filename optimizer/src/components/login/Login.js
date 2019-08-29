@@ -59,11 +59,11 @@ export default function Login () {
            
           <div className='redirect'>
             No Account? 
-            <Link to='/signup'> Sign up </Link> 
+            <Link to='/new-user'> Sign up </Link> 
             </div>
 
             {/* link to signup */}
-            <button> <h3> No Account? Sign Up </h3> </button>
+            {/* <button> <h3> No Account? Sign Up </h3> </button> */}
             
             
         </form>

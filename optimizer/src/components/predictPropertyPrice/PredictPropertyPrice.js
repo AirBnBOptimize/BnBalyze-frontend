@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import './predictPropertyPrice.css';
+// import axios from 'axios';
+import {axiosWithAuth} from '../../utilities/axiosWithAuth';
 
 export default function PredictPropertyPrice() {
     // to hold the state
@@ -9,22 +11,46 @@ export default function PredictPropertyPrice() {
         accommodates: '',
         bedrooms: '',
         number_of_reviews: '',
-        wifi: '',
-        cable_tv: '',
-        washer: '',
-        kitchen: ''})
+        wifi: false,
+        cable_tv: false,
+        washer: false,
+        kitchen: false})
 
     // to update the state when changing values
     const handleChange = event => {
         console.log('changing');
+        setPropertyPrediction({...propertyPrediction, [event.target.name]: event.target.value});
+        console.log('current propertyPrediction: ', propertyPrediction)
+    }
 
+    // to handle checkbox
+    const handleChangeCheckbox = event => {
+        if (event.target.checked) {
+            setPropertyPrediction({...propertyPrediction, [event.target.name]: true})
+        }
     }
 
     // to predict the price when form is submitted
     const predictPrice = event => {
-        console.log('predicting price');
+        // console.log('predicting price');
+        event.preventDefault();
+        // console.log('calling the predicted price', propertyPrediction);
+
+        axiosWithAuth()
+        // axios
+        .post('https://bnbalyze.herokuapp.com/properties/userproperties', propertyPrediction)
+        .then(response => {
+            console.log(response);
+
+        })
+        .catch(error => {
+            console.log(error);
+        })
+
 
     }
+
+
 
     return (
         < >
@@ -32,10 +58,11 @@ export default function PredictPropertyPrice() {
             <h3> Predict Property Price </h3>
 
             <div className='neighborhood-room-type'>
-
+    
                 <div className='element-predict-form'>
                     Neighborhood
-                    <select value={propertyPrediction.neigborhood} onChange={handleChange}>
+                    <select name='neighborhood' value={propertyPrediction.neigborhood} onChange={handleChange}>
+                        <option value='0'> Neighborhood </option>
                         <option value='1'> Friedrichshain-Kreuzberg</option>
                         <option value="2"> Mitte </option>
                         <option value="3"> Pankow </option>
@@ -53,7 +80,8 @@ export default function PredictPropertyPrice() {
 
                 <div className='element-predict-form'>
                     Room type
-                    <select value={propertyPrediction.room_type} onChange={handleChange}>
+                    <select name='room_type' value={propertyPrediction.room_type} onChange={handleChange}>
+                        <option value='0'> Room type </option>
                         <option value='1'> Entire home/apt </option>
                         <option value="2"> Private room </option>
                         <option value="3"> Shared room </option>
@@ -69,7 +97,7 @@ export default function PredictPropertyPrice() {
 
                 <div className='element-predict-form'>
                 # of Bedrooms 
-                <input type='number' name='numberOfBedrooms' value={propertyPrediction.numberOfBedrooms} onChange={handleChange} />
+                <input type='number' name='bedrooms' value={propertyPrediction.bedrooms} onChange={handleChange} />
                 </div>
 
                 <div className='element-predict-form'>
@@ -87,7 +115,7 @@ export default function PredictPropertyPrice() {
                     type='checkbox'
                     name='wifi'
                     value={propertyPrediction.wifi}
-                    onChange={handleChange}
+                    onChange={handleChangeCheckbox}
                     />
                 </div>
 
@@ -97,7 +125,7 @@ export default function PredictPropertyPrice() {
                     type='checkbox'
                     name='cableTv'
                     value={propertyPrediction.cable_tv}
-                    onChange={handleChange}
+                    onChange={handleChangeCheckbox}
                     />
                 </div>
 
@@ -107,7 +135,7 @@ export default function PredictPropertyPrice() {
                     type='checkbox'
                     name='washer'
                     value={propertyPrediction.washer}
-                    onChange={handleChange}
+                    onChange={handleChangeCheckbox}
                     />
                 </div>
 
@@ -117,7 +145,7 @@ export default function PredictPropertyPrice() {
                     type='checkbox'
                     name='kitchen'
                     value={propertyPrediction.kitchen}
-                    onChange={handleChange}
+                    onChange={handleChangeCheckbox}
                     />
                 </div>
 
