@@ -8,7 +8,7 @@ import Home from "./components/home/Home.js";
 import PropertyInfo from "./components/propertyInfo/PropertyInfo.js";
 import HowItWorks from "./components/howitworks/HowItWorks.js";
 import PredictPropertyPrice from './components/predictPropertyPrice/PredictPropertyPrice';
-import PropertyList from "./components/PropertyList/PropertyList.js";
+import PropertyList from "./components/propertyList/PropertyList.js";
 import WelcomePage from './components/welcomePage/WelcomePage.js';
 
 function App() {
