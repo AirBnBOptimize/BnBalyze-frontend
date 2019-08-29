@@ -5,48 +5,70 @@ import axios from "axios";
 
  function addPropertyForm() {
 
+    const hood_dict = {'Friedrichshain-Kreuzberg': 1,
+    'Mitte': 2,
+    'Pankow': 3,
+    'Neukölln': 4,
+    'Charlottenburg-Wilm.': 5,
+    'Tempelhof - Schöneberg': 6,
+    'Lichtenberg': 7,
+    'Treptow - Köpenick': 8,
+    'Steglitz - Zehlendorf': 9,
+    'Reinickendorf': 10,
+    'Marzahn - Hellersdorf':11,
+    'Spandau': 12};
+
+    const room_dict = {'Entire home/apt': 1, 'Private room': 2, 'Shared room': 3};
 
     return (
         <div>
         <h3> Add a Property </h3>
         <Form className='add-property-form'>
 
-              <div className='neighborhood'>
+            <div className='neighborhood'>
                 Neighborhood
-                <Field type="text" name="neighborhood" placeholder="Name" />
+                <Field component="select" name="neighborhood" key="neighborhood">
+                {Object.keys(hood_dict).map((item)=>{
+                    return <option value={hood_dict[item]} key={item}>{item}</option>
+                })}
+                </Field>
              </div>
              <div className='roomtype'> 
              RoomType
-             <Field type="text" name="roomtype" placeholder="Room Type" />
+            <Field component="select" name="roomtype" key="roomtype">
+                {Object.keys(room_dict).map((item)=>{
+                    return <option value={room_dict[item]} key={item}>{item}</option>
+                })}
+            </Field>
              </div>
-             <div className='accomodates'> 
+             <div className='accomodates' key=""> 
              Accomodates 
-             <Field type="text" name="accomodates" placeholder="Accomodates" />
+             <Field type="text" name="accomodates" placeholder="Accomodates" key="accomodates" />
              </div>
              <div className='bedrooms'>
              Bedrooms
-             <Field type="text" name="bedrooms" placeholder="Bedrooms" />
+             <Field type="text" name="bedrooms" placeholder="Bedrooms" key="bedrooms" />
              
              </div>
              <div className='reviews'>
              # of Reviews
-             <Field type="text" name="reviews" placeholder="# of Reviews" />
+             <Field type="text" name="reviews" placeholder="# of Reviews" key="reviews" />
              </div>
              <div className='wifi'>
              Wifi
-             <Field type="checkbox" name="wifi" checked="" />
+             <Field type="checkbox" name="wifi" checked="" key="wifi" />
              </div>
              <div className='cabletv'>
              Cable TV
-             <Field type="checkbox" name="cabletv" checked="" />
+             <Field type="checkbox" name="cabletv" checked="" key="cabletv" />
              </div>
              <div className='washer'>
              Washer
-             <Field type="checkbox" name="washer" checked="" />
+             <Field type="checkbox" name="washer" checked="" key="washer" />
              </div>
              <div className='kitchen'>
              Kitchen
-             <Field type="checkbox" name="kitchen" checked="" />
+             <Field type="checkbox" name="kitchen" checked="" key="kitchen" />
              </div>        
              <button> Add </button> 
          </Form>
@@ -67,26 +89,19 @@ const AddPropertyForm = withFormik({
         washer: washer || false,
         kitchen: kitchen || false
       };
-     }
-    //,
-    // handleSubmit(values, { resetForm, setErrors, setSubmitting,setStatus }) {
-    //   if (values.email === "alreadytaken@atb.dev") {
-    //     setErrors({ email: "That email is already taken" });
-    //   } else {
-    //     axios
-    //       .post("https://reqres.in/api/users", values)
-    //       .then(res => {
-    //         // console.log(res); // Data was created successfully and logs to console
-    //         resetForm();
-    //         setSubmitting(false);
-    //         setStatus(res.data);
-    //       })
-    //       .catch(err => {
-    //         console.log(err); // There was an error creating the data and logs to console
-    //         setSubmitting(false);
-    //       });
-    //   }
-    // }
+    },
+    handleSubmit(values, { resetForm, setStatus }) {
+        axios
+          .post("https://bnbalyze.herokuapp.com/properties", values)
+          .then(res => {
+            // resetForm();
+            setStatus(res.data);
+            console.log(res.data);
+          })
+          .catch(err => {
+            console.log(err); // There was an error creating the data and logs to console
+          });
+    }
   })(addPropertyForm);
 
 export default AddPropertyForm
