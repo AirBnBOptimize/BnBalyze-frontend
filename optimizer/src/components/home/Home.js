@@ -5,10 +5,10 @@ import { faDollarSign, faHotel } from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom';
 
 const  Home= (props) => {
-    console.log("Home Props",props,localStorage.getItem('token'));
+    // console.log("Home Props",props,localStorage.getItem('token'));
     if(props.match.path==="/logout"){
         localStorage.setItem('token','')
-        console.log("NoToken",localStorage.getItem('token'));
+        // console.log("NoToken",localStorage.getItem('token'));
     };
     
     return ( 
