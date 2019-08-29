@@ -44,18 +44,21 @@ export default function Login() {
 
             <h3> Please login </h3>
 
-            Username
-            <input type='text' name='username' value={credentials.username} onChange={handleChange} />
+            <div className='element-login-form'>
+                Username
+                <input type='text' name='username' value={credentials.username} onChange={handleChange} />
+            </div>
 
-            Password
-            <input type='password' name='password' value={credentials.password} onChange={handleChange} />
+            <div className='element-login-form'>
+                Password
+                <input type='password' name='password' value={credentials.password} onChange={handleChange} />
+            </div>
 
             <button> Login </button>
            
-           {/* link to register */}
           <div className='redirect'>
-            No Account?
-            <Link to="/register">Sign In</Link>
+            No Account? 
+            <Link to='/signup'> Sign up </Link> 
             </div>
 
         </form>
