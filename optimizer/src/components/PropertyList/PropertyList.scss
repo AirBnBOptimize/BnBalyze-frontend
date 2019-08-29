@@ -1,0 +1,61 @@
+.container {
+    display: inline-block;
+    width: 850px;
+}
+
+/* Property Card */
+.image {
+    
+}
+
+.cardStyle {
+    background-image: url('https://media.timeout.com/images/105404217/630/472/image.jpg');
+    background-size: 400px 200px;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 300px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    text-align: left;
+    line-height: 0.6cm;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color:#484848;
+    margin: 20px;
+    padding: 22% 4% 0% 4%;
+
+    .amenities {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .icon {
+        background-color: #FF5A5F
+    }
+
+    .pricecompare {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        color: white;
+        font-size: 0.6rem;
+
+        .pricebox {
+        height: 100px;
+        width: 100px;
+        background-color: #FF5A5F;
+        border-radius: 20px;
+        margin: 10px 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .title {
+        top: 40px;    
+        }
+    }
+
+    .reviews {
+        margin: 25px 0;
+    }
+  }
