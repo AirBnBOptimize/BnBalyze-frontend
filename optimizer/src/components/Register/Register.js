@@ -22,6 +22,7 @@ export default function Register() {
                     Authorization: localStorage.getItem('token')
                 }
             };
+
             let res = await axios.post('https://bnbalyze.herokuapp.com/auth/register', credentials, headers);
             localStorage.setItem('token', res.data.payload);
             console.log(res);

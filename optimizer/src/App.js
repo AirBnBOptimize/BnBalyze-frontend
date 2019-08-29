@@ -9,6 +9,8 @@ import PropertyInfo from "./components/propertyInfo/PropertyInfo.js";
 import HowItWorks from "./components/howitworks/HowItWorks.js";
 import PredictPropertyPrice from './components/predictPropertyPrice/PredictPropertyPrice';
 import PropertyList from "./components/PropertyList/PropertyList.js";
+import WelcomePage from './components/welcomePage/WelcomePage.js';
+
 function App() {
   return (
     <div className="App">
@@ -18,7 +20,7 @@ function App() {
           render={(props) => {
             // console.log("Button",props);
             if(localStorage.getItem('token')){
-              return(<Header  {...props} loginLink="/logout" loginText="Logout" />)
+              return(<Header  {...props} loginLink="/logout" loginText="Logout"/>)
             } else if(props.location.pathname==="/login"){
               return(<Header  {...props} loginLink="/new-user" loginText="Register" />)
             } else {
@@ -33,6 +35,7 @@ function App() {
         <Route exact path='/new-user' component={Register} />
         <Route path="/login" component={Login} />
         <Route path="/howitworks" component={HowItWorks} />
+        <Route path="/welcome" component={WelcomePage} />
         <Route exact path="/propertyInfo/:id" component={PropertyInfo} />
         <Route exact path="/properties/" component={PropertyList} />
 

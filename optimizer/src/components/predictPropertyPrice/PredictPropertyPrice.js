@@ -27,73 +27,110 @@ export default function PredictPropertyPrice() {
     }
 
     return (
-        <div className='predict-property-price'>
-             <form onSubmit={predictPrice}>
+        < >
+        <form className='predict-property-price' onSubmit={predictPrice}>
             <h3> Predict Property Price </h3>
-            <label>
-                Neighborhood
-                <select value={propertyPrediction.neigborhood} onChange={handleChange}>
-                    <option value="neigborhood1"> Neighborhood 1 </option>
-                    <option value="neigborhood2"> Neighborhood 2 </option>
-                    <option value="neigborhood3"> Neighborhood 3 </option>
-                    <option value="neigborhood4"> Neighborhood 4 </option>
-                </select>
-            </label>
-           
-            Zipcode
-            <input type='number' name='zipcode' value={propertyPrediction.zipcode} onChange={handleChange} />
-          
-            Room type
+
+            <div className='neighborhood-room-type'>
+
+                <div className='element-predict-form'>
+                    Neighborhood
+                    <select value={propertyPrediction.neigborhood} onChange={handleChange}>
+                        <option value='1'> Friedrichshain-Kreuzberg</option>
+                        <option value="2"> Mitte </option>
+                        <option value="3"> Pankow </option>
+                        <option value="4"> Neukölln </option>
+                        <option value="5"> Charlottenburg-Wilm </option>
+                        <option value="6"> Tempelhof - Schöneberg </option>
+                        <option value="7"> Lichtenberg </option>
+                        <option value="8"> Treptow - Köpenick </option>
+                        <option value="9"> Steglitz - Zehlendorf </option>
+                        <option value="10"> Reinickendorf </option>
+                        <option value="11"> Marzahn - Hellersdorf </option>
+                        <option value="12"> Spandau </option>
+                    </select>
+                </div>
+
+                <div className='element-predict-form'>
+                    Room type
+                    <select value={propertyPrediction.room_type} onChange={handleChange}>
+                        <option value='1'> Entire home/apt </option>
+                        <option value="2"> Private room </option>
+                        <option value="3"> Shared room </option>
+                    </select>
+                </div>
+            </div>
+
+            <div className='accomodates-bedrooms-bathrooms-reviews'>
+                <div className='element-predict-form'>
+                # of People
+                <input type='number' name='accommodates' value={propertyPrediction.accommodates} onChange={handleChange} />
+                </div>
+
+                <div className='element-predict-form'>
+                # of Bedrooms 
+                <input type='number' name='numberOfBedrooms' value={propertyPrediction.numberOfBedrooms} onChange={handleChange} />
+                </div>
+
+                <div className='element-predict-form'>
+                # of Reviews 
+                <input type='number' name='number_of_reviews' value={propertyPrediction.number_of_reviews} onChange={handleChange} />
+                </div>
+
+            </div>
             
-            Private
-            Shared
-            Entire Home/Apartment
+            <div className='wifi-cable-washer-kitchen'>
 
-            Number of People 
-            <input type='number' name='numberOfPeople' value={propertyPrediction.numberOfPeople} onChange={handleChange} />
+                <div className='element-predict-form'> 
+                    Wifi
+                    <input 
+                    type='checkbox'
+                    name='wifi'
+                    value={propertyPrediction.wifi}
+                    onChange={handleChange}
+                    />
+                </div>
 
-            Number of Bedrooms 
-            <input type='number' name='numberOfBedrooms' value={propertyPrediction.numberOfBedrooms} onChange={handleChange} />
+                <div className='element-predict-form'> 
+                    Cable/Tv
+                    <input 
+                    type='checkbox'
+                    name='cableTv'
+                    value={propertyPrediction.cable_tv}
+                    onChange={handleChange}
+                    />
+                </div>
 
-            Number of Reviews 
-            <input type='number' name='nnumberOfReviews' value={propertyPrediction.numberOfReviews} onChange={handleChange} />
+                <div className='element-predict-form'> 
+                    Washer
+                    <input 
+                    type='checkbox'
+                    name='washer'
+                    value={propertyPrediction.washer}
+                    onChange={handleChange}
+                    />
+                </div>
 
-            Wifi
-            <input 
-            type='checkbox'
-            name='wifi'
-            value={propertyPrediction.wifi}
-            onChange={handleChange}
-            />
-           
-           Cable/Tv
-            <input 
-            type='checkbox'
-            name='cableTv'
-            value={propertyPrediction.cableTv}
-            onChange={handleChange}
-            />
+                <div className='element-predict-form'> 
+                    Kitchen
+                    <input 
+                    type='checkbox'
+                    name='kitchen'
+                    value={propertyPrediction.kitchen}
+                    onChange={handleChange}
+                    />
+                </div>
 
-            Washer
-            <input 
-            type='checkbox'
-            name='washer'
-            value={propertyPrediction.washer}
-            onChange={handleChange}
-            />
+            </div>
 
-            Kitchen
-            <input 
-            type='checkbox'
-            name='kitchen'
-            value={propertyPrediction.kitchen}
-            onChange={handleChange}
-            />
+ 
+
+
 
             <button>
                 Predict
             </button>
        </form>
-       </div>
+       </>
     )
 }

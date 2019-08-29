@@ -1,0 +1,61 @@
+.predict-property-price{
+    display: flex;
+    flex-direction: column;
+  
+    margin: 0 auto;
+    margin-top: 20%;
+    width: 50%; 
+  
+    align-items: center;
+    justify-content: center;
+   
+    background-color: #FF5A5F;
+    color: white;
+    font-family: Raleway;
+    font-size: 1.5rem;
+}
+
+.element-predict-form{
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    text-align: left;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.element-predict-form input{
+    box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+}
+
+
+.neighborhood-room-type{
+    display: flex;    
+}
+
+.accomodates-bedrooms-bathrooms-reviews{
+    display: flex;
+}
+
+.accomodates-bedrooms-bathrooms-reviews input{
+    width: 90%;
+}
+
+.wifi-cable-washer-kitchen{
+    display: flex;
+    
+}
+
+.wifi-cable-washer-kitchen .element-predict-form{
+    width: 5rem;
+}
+
+.wifi-cable-washer-kitchen .element-predict-form input{
+    width: 1rem;
+}
+
+.predict-property-price button{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}

@@ -1,32 +1,29 @@
 import React, {useEffect,useState} from 'react';
 import './propertyInfo.scss';
 import axios from 'axios';
-import {neighborhood} from '../../utilities/neighborhood.js';
-import {roomType} from '../../utilities/neighborhood.js';
 
 const PropertyInfo = (props) => {
-    const data={'neighborhood': 2
-    , 'room_type': 2
-    , 'accommodates':8
-    , 'bedrooms': 3
-    , 'bathrooms': 4
-    , 'number_of_reviews':30
-    , 'wifi':1
-    , 'cable_tv':0
-    , 'washer':0
-    , 'kitchen':1};
-
+    //Static Data
+    // const data={'neighborhood': 2
+    // , 'room_type': 2
+    // , 'accommodates':8
+    // , 'bedrooms': 3
+    // , 'number_of_reviews':30
+    // , 'wifi':1
+    // , 'cable_tv':0
+    // , 'washer':0
+    // , 'kitchen':1};
     const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJ1c2VybmFtZSI6IkFudGhvbnkxIiwiaWF0IjoxNTY3MDA5NTcwLCJleHAiOjE1NjcwOTU5NzB9.gSKEmTp3MVWILSbhEh99TSWa9aSgmGksiFRKcKAS-dg";
-
+    localStorage.setItem('token',token);
 
     const [property,setProperty]=useState();
 
     useEffect(()=>{
-        console.log("PI Props", props,props.match.params.id);
+        console.log("PI Props", props,props.match.params.id,localStorage.getItem('token'));
         // axiosWithAuth
-        // localStorage.getItem(‘token’)
+        
         axios
-        .get('https://bnbalyze.herokuapp.com/properties',{headers: {Authorization:token}})
+        .get('https://bnbalyze.herokuapp.com/properties',{headers: {Authorization:localStorage.getItem('token')}})
         .then(res => {
             console.log("DATA",res.data[props.match.params.id]);
             setProperty(res.data[props.match.params.id]);
@@ -38,7 +35,7 @@ const PropertyInfo = (props) => {
     },[props]);
 
     if (!property){return "Loading"};
-
+    
     return ( 
         <div className="propertyInfo">
             <div className="propertyBox">
