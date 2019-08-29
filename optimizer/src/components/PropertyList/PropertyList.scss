@@ -3,10 +3,14 @@
     width: 850px;
 }
 
-/* Property Card */
-.image {
-    
+h6 {
+    margin: 0;
+    padding: 0;
+    color: #484848;
+    font-size: 0.5rem;
 }
+
+/* Property Card */
 
 .cardStyle {
     background-image: url('https://media.timeout.com/images/105404217/630/472/image.jpg');
@@ -28,10 +32,15 @@
     .amenities {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 10px;
     }
 
-    .icon {
-        background-color: #FF5A5F
+    .room_type {
+        color: #767676;
+    }
+
+    .neighborhood {
+        font-size: 1rem;
     }
 
     .pricecompare {
@@ -42,11 +51,15 @@
         font-size: 0.6rem;
 
         .pricebox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
         height: 100px;
         width: 100px;
         background-color: #FF5A5F;
         border-radius: 20px;
-        margin: 10px 20px;
+        margin: 0px 20px 10px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
 
