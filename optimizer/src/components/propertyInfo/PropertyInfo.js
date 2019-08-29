@@ -13,7 +13,7 @@ const PropertyInfo = (props) => {
     // , 'cable_tv':0
     // , 'washer':0
     // , 'kitchen':1};
-    const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJ1c2VybmFtZSI6IkFudGhvbnkxIiwiaWF0IjoxNTY3MDA5NTcwLCJleHAiOjE1NjcwOTU5NzB9.gSKEmTp3MVWILSbhEh99TSWa9aSgmGksiFRKcKAS-dg";
+    const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo1LCJ1c2VybmFtZSI6IkFudGhvbnkxMiIsImlhdCI6MTU2NzA5NzA1MiwiZXhwIjoxNTY3MTgzNDUyfQ.Isl1Ku_z6RQAW-M06lVQZ_hBXJ5HkuGqPOHZUnbabVI";
     localStorage.setItem('token',token);
 
     const [property,setProperty]=useState();
@@ -32,6 +32,9 @@ const PropertyInfo = (props) => {
             console.error('Server Error', err);
             console.log(err);
         });
+
+        //Post
+        
     },[props]);
 
     if (!property){return "Loading"};
