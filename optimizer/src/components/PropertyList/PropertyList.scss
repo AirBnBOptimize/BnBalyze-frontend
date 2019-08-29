@@ -1,5 +1,11 @@
+.property-list-grid-view {
+    display: flex;
+    justify-content: center;
+}
+
 .container {
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
     width: 850px;
 }
 
@@ -7,7 +13,7 @@ h6 {
     margin: 0;
     padding: 0;
     color: #484848;
-    font-size: 0.5rem;
+    font-size: 0.8rem;
 }
 
 /* Property Card */
@@ -40,7 +46,8 @@ h6 {
     }
 
     .neighborhood {
-        font-size: 1rem;
+        font-size: 1.8rem;
+        margin: 3% 0;
     }
 
     .pricecompare {
