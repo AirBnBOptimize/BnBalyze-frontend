@@ -2,10 +2,10 @@ import React from 'react';
 import './welcomePage.scss';
 import PropertyList from '../propertyList/PropertyList.js';
 
-const  WelcomePage= () => {
+const  WelcomePage= (props) => {
     return (
         <div className="welcome">
-            <div className="addProp">Add Property</div>
+            <div className="addProp" onClick={(e)=>props.history.push("/addproperty")}>Add Property</div>
             <PropertyList/>
         </div>
 
