@@ -12,7 +12,15 @@ const Property = (props) => {
     <Card.Content className="property-card">
       
       <Card.Header>{props.name}</Card.Header>
-      <Card.Description className="room_type">{props.room_type} · {props.accommodates} Beds </Card.Description>
+      <div className="pricecompare">
+        <div className="pricebox-container">
+          <div className="buttonBox">Edit</div>
+        </div>
+        <div className="pricebox-container">
+          <div className="buttonBox">Delete</div>
+        </div>
+      </div>
+      <Card.Description className="room_type">{props.room_type} · Sleeps {props.accommodates} </Card.Description>
       <Card.Description className="neighborhood">{props.neighborhood} </Card.Description>
       <Card.Description>Bedrooms · {props.bedrooms}</Card.Description>
 
@@ -39,7 +47,7 @@ const Property = (props) => {
       <a>
         {/* App Rating Section */}
             <Icon name='star' />
-        Reviews: {props.number_of_reviews}
+        Reviews: {props.reviews}
       </a>  
     </Card.Content>
     </Card>

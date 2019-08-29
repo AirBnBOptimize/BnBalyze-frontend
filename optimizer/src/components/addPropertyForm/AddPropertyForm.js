@@ -3,6 +3,7 @@ import { withFormik,Form,Field } from 'formik';
 import axios from "axios";
 import {neighborhood} from '../../utilities/neighborhood.js';
 import {roomType} from '../../utilities/roomType.js';
+import "./addPropertyForm.scss";
 
  function addPropertyForm(values,status) {
 
@@ -21,11 +22,9 @@ import {roomType} from '../../utilities/roomType.js';
 
     const room_dict = {'Entire home/apt': 1, 'Private room': 2, 'Shared room': 3};
 
-
-
     return (
-        <div>
-        <h3> Add a Property </h3>
+        <div className="formDiv">
+        <h2> Add a Property </h2>
         <Form className='add-property-form'>
 
             <div className='neighborhood'>
@@ -73,7 +72,9 @@ import {roomType} from '../../utilities/roomType.js';
              Kitchen
              <Field type="checkbox" name="kitchen" checked={values.kitchen} key="kitchen" />
              </div>        
-             <button type="submit"> Add </button> 
+             <div className="buttonDiv">
+                <button type="submit"> Add </button> 
+            </div>
          </Form>
          </div>
     );
