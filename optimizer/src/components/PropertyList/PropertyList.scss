@@ -5,12 +5,13 @@
 
 /* Property Card */
 .image {
-    background-image: url('https://media.timeout.com/images/105404217/630/472/image.jpg');
-    background-size: cover;
-    height: 100px;
+    
 }
 
 .cardStyle {
+    background-image: url('https://media.timeout.com/images/105404217/630/472/image.jpg');
+    background-size: 400px 200px;
+    background-repeat: no-repeat;
     height: 300px;
     width: 300px;
     background-color: #FFFFFF;
@@ -22,11 +23,15 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color:#484848;
     margin: 20px;
-    padding: 4%;
+    padding: 22% 4% 0% 4%;
 
     .amenities {
         display: flex;
         justify-content: space-between;
+    }
+
+    .icon {
+        background-color: #FF5A5F
     }
 
     .pricecompare {
