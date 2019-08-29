@@ -30,7 +30,7 @@ const Property = (props) => {
         </div>
         <div className="pricebox-container">
           <h6>Recommendation</h6>
-          <div className="pricebox"><p className="price">$52 / night</p></div>
+          <div className="pricebox"><p className="price">${props.recommendation_price} / night</p></div>
         </div>
       </div>
 

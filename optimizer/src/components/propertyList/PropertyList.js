@@ -12,7 +12,7 @@ export default function PropertyList() {
         .get(`https://bnbalyze.herokuapp.com/properties`, {headers: {Authorization: localStorage.getItem('token')}})
         .then(response => {
           setProperty(response.data);
-          console.log(response.data);
+          console.log("Properties",response.data);
         })
         .catch(error => {
           console.error(error);
@@ -37,6 +37,7 @@ export default function PropertyList() {
               cable_tv={id.cable_tv}
               washer={id.washer}
               kitchen={id.kitchen}
+              recommendation_price={id.recommendation_price}
             />
             </div>
             ))}
