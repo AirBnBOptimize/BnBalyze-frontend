@@ -6,44 +6,14 @@ import Register from './components/Register/Register';
 import Login from './components/login/Login';
 import Home from "./components/home/Home.js";
 import PropertyInfo from "./components/propertyInfo/PropertyInfo.js";
-<<<<<<< HEAD
-import PropertyList from "./components/PropertyList/PropertyList.js";
-
-function App() {;
-
-=======
 import HowItWorks from "./components/howitworks/HowItWorks.js";
 import PredictPropertyPrice from './components/predictPropertyPrice/PredictPropertyPrice';
+import PropertyList from "./components/PropertyList/PropertyList.js";
 function App() {
->>>>>>> 67b71cb44d5e11d2aa0ac806f2fe3bb3d730c8cb
   return (
     <div className="App">
 
       <Switch>
-<<<<<<< HEAD
-
-      <Route path="/login"
-
-        render={(props) => {
-          return(
-            <>
-            <Header  {...props} loginLink="Register"/>
-            <Login/>
-            </>
-          
-            )
-        }
-      }
-      /> 
-
-
-
-        <Route component={Header}/>
-      
-      </Switch>
-      <PropertyList/>
-      <Route exact path="/" component={Home}/>
-=======
         <Route
           render={(props) => {
             // console.log("Button",props);
@@ -64,11 +34,11 @@ function App() {
         <Route path="/login" component={Login} />
         <Route path="/howitworks" component={HowItWorks} />
         <Route exact path="/propertyInfo/:id" component={PropertyInfo} />
+        <Route exact path="/properties/" component={PropertyList} />
 
 
       {/* temp for testing */}
       <PredictPropertyPrice/>
->>>>>>> 67b71cb44d5e11d2aa0ac806f2fe3bb3d730c8cb
 
     </div>
   )

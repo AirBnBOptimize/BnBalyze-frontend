@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Property from "./Property";
+import "./PropertyList.scss";
 import { Container } from 'semantic-ui-react'
 
 export default function PropertyList() {
@@ -20,7 +21,7 @@ export default function PropertyList() {
   },[]);
 
   return (
-    <section className="property-list grid-view">
+    <section className="property-list-grid-view">
       <Container className="container">
           {property.map(id => (   
             <div className="cardStyle">
@@ -31,7 +32,7 @@ export default function PropertyList() {
               room_type={id.room_type}
               accommodates={id.accommodates}
               bedrooms={id.bedrooms}
-              reviews={id.reviews}
+              reviews={id.number_of_reviews}
               wifi={id.wifi}
               cable_tv={id.cable_tv}
               washer={id.washer}

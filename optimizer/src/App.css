@@ -2,33 +2,6 @@
   text-align: center;
 }
 
-<<<<<<< HEAD
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-=======
 /* Login css */
 .login-form{
   display: flex;
@@ -55,4 +28,4 @@
   color: white;
   font-family: Raleway;
 }
->>>>>>> 67b71cb44d5e11d2aa0ac806f2fe3bb3d730c8cb
+
