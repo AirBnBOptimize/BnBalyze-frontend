@@ -28,16 +28,21 @@ export default function PropertyList() {
             <div className="cardStyle">
             <Property
               key={id}
+              title={id.title}
+              url={id.url}
+              photo_url={id.photo_url}
+              current_price={current_price}
               image={id.image}
               neighborhood={id.neighborhood}
               room_type={id.room_type}
               accommodates={id.accommodates}
               bedrooms={id.bedrooms}
-              reviews={id.reviews}
+              reviews={id.number_of_reviews}
               wifi={id.wifi}
               cable_tv={id.cable_tv}
               washer={id.washer}
               kitchen={id.kitchen}
+              url={id.url}
             />
             </div>
             ))}

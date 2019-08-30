@@ -26,7 +26,10 @@ import "./addPropertyForm.scss";
         <div className="formDiv">
         <h2> Add a Property </h2>
         <Form className='add-property-form'>
-
+        <div className='title' key=""> 
+             Title 
+             <Field type="text" name="title" placeholder="Title" key="title" />
+             </div>
             <div className='neighborhood'>
                 Neighborhood
                 <Field component="select" name="neighborhood">
@@ -43,6 +46,14 @@ import "./addPropertyForm.scss";
                 })}
             </Field>
              </div>
+             <div className='url' key=""> 
+             URL 
+             <Field type="text" name="url" placeholder="URL" key="url" />
+             </div>
+             <div className='photo_url' key=""> 
+             Photo URL 
+             <Field type="text" name="photo_url" placeholder="Photo URL" key="photo_url" />
+             </div>
              <div className='accommodates' key=""> 
              Accommodates 
              <Field type="number" name="accommodates" placeholder="Accommodates" key="accommodates" />
@@ -55,6 +66,10 @@ import "./addPropertyForm.scss";
              <div className='reviews'>
              # of Reviews
              <Field type="number" name="number_of_reviews" placeholder="# of Reviews" key="reviews" />
+             </div>
+             <div className='current_price' key=""> 
+             Current Price 
+             <Field type="number" name="current_price" placeholder="Current Price" key="current_price" />
              </div>
              <div className='wifi'>
              Wifi
@@ -75,15 +90,19 @@ import "./addPropertyForm.scss";
              <div className="buttonDiv">
                 <button type="submit"> Add </button> 
             </div>
+            
          </Form>
          </div>
     );
 }
 
 const AddPropertyForm = withFormik({
-    mapPropsToValues({ neighborhood,room_type,accommodates,bedrooms,number_of_reviews,wifi,cable_tv,washer,kitchen }) {
+    mapPropsToValues({ neighborhood,room_type,accommodates,bedrooms,number_of_reviews,wifi,cable_tv,washer,kitchen, current_price, url, photo_url, title }) {
 
       return {
+        title: title || null,
+        photo_url: photo_url || null,
+        url: url || null,
         neighborhood: neighborhood || '',         
         room_type: room_type || '',
         accommodates: accommodates || 0,
@@ -92,7 +111,8 @@ const AddPropertyForm = withFormik({
         wifi: wifi || false,
         cable_tv: cable_tv || false,
         washer: washer || false,
-        kitchen: kitchen || false
+        kitchen: kitchen || false,
+        current_price: current_price || null
       };
     },
     handleSubmit(values, { resetForm, setStatus }) {
@@ -103,6 +123,12 @@ const AddPropertyForm = withFormik({
         DSvalues.cable_tv=DSvalues.cable_tv?1:0;
         DSvalues.washer=DSvalues.washeres?1:0;
         DSvalues.kitchen=DSvalues.kitchen?1:0;
+        delete DSvalues['title'];
+        delete DSvalues['current_price'];
+        delete DSvalues['url'];
+        delete DSvalues['photo_url']
+        Object.keys(DSvalues).filter(x => x !== 'current_price' || x !== 'url' || x !== 'photo_url' || x !== 'title')
+
         console.log("VALS",values,"DS",DSvalues);
         axios
         .post("https://bnbalyze.herokuapp.com/properties/userproperties", DSvalues)

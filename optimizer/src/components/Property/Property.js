@@ -4,14 +4,14 @@ import { Card, Icon, Image } from 'semantic-ui-react';
 const Property = (props) => {
     return (
     <Card>
-    <Image src={props.image} wrapped ui={false} />
+    <Image src={props.photo_url} wrapped ui={false} />
     <Card.Content className="property-card">
       <Card.Header>{props.name}</Card.Header>
+      <Card.Description>{props.title}</Card.Description>
       <Card.Description>{props.neighborhood}</Card.Description>
       <Card.Description>{props.room_type}</Card.Description>
       <Card.Description>{props.accommodates}</Card.Description>
       <Card.Description>{props.bedrooms}</Card.Description>
-      <Card.Description>{props.bathrooms}</Card.Description>
       <Card.Description>{props.wifi}</Card.Description>
       <Card.Description>{props.cable_tv}</Card.Description>
       <Card.Description>{props.washer}</Card.Description>
@@ -21,8 +21,14 @@ const Property = (props) => {
       <a>
         {/* App Rating Section */}
         <Icon name='star' />
-        Rating {props.reviews}
+        Rating {props.number_of_reviews}
       </a>
+      <a>
+        href={props.url}
+        {/* App Rating Section */}
+        <Icon name='linkify' />
+      </a>
+
     </Card.Content>
     </Card>
   );

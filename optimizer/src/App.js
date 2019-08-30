@@ -3,12 +3,12 @@ import { Route, Switch } from 'react-router-dom';
 import Header from "./components/header/Header.js";
 import './App.sass';
 import Register from './components/Register/Register';
-import Login from './components/login/Login';
+import Login from './components/home/Login';
 import Home from "./components/home/Home.js";
 import PropertyInfo from "./components/propertyInfo/PropertyInfo.js";
 import HowItWorks from "./components/howitworks/HowItWorks.js";
-import PropertyList from "./components/propertyList/PropertyList.js";
-import WelcomePage from './components/welcomePage/WelcomePage.js';
+import PropertyList from "./components/propertyInfo/PropertyList.js";
+import WelcomePage from './components/home/WelcomePage.js';
 import AddPropertyForm from './components/addPropertyForm/AddPropertyForm.js';
 
 
@@ -34,7 +34,7 @@ function App() {
         <Route exact path="/logout" component={Home} />
         <Route exact path='/new-user' component={Register} />
         <Route path="/login" component={Login} />
-        <Route path="/howitworks" component={HowItWorks} />
+        <Route exact path="/" component={HowItWorks} />
         <Route path="/welcome" component={WelcomePage} />
         <Route exact path="/propertyInfo/:id" component={PropertyInfo} />
         <Route exact path="/properties" component={PropertyList} />

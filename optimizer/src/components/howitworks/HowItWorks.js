@@ -7,7 +7,7 @@ const HowItWorks = () => {
     return ( 
         <main>
         <section>
-            <div className="marketingContent">
+            <div className="marketingContent" id="howitworks">
                 <div className="contentIcon">
                     <FontAwesomeIcon icon={faCalculator} className="icon" />
                 </div>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './login.css';
-import PropertyList from '../propertyList/PropertyList';
+import PropertyList from '../propertyInfo/PropertyList';
 
 
 export default function Login (props) {
