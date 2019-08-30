@@ -117,7 +117,6 @@ const AddPropertyForm = withFormik({
             .post("https://bnbalyze.herokuapp.com/properties/account", values)
             .then(res => {
                 // resetForm();
-                console.log("Hello");
                 // setStatus(res.data);
                 console.log("Data",res.data);
             })

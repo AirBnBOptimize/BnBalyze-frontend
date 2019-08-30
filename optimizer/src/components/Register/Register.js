@@ -24,7 +24,6 @@ export default function Register(props) {
             };
 
             let res = await axios.post('https://bnbalyze.herokuapp.com/auth/register', credentials, headers);
-            console.log("WTF",res,res.status);
             if (res.status===201) {
                 
                 axios
