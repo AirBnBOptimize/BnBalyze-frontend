@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './login.css';
+import RocketMan from '../../img/RocketMan.png'
+import PropertyList from '../propertyInfo/PropertyList';
 
 
-export default function Login () {
+export default function Login (props) {
 
     // to hold the state
     const [credentials, setCredentials] = useState({username: '', password: ''});
@@ -30,9 +32,11 @@ export default function Login () {
         .then(response => {
             console.log('getting the following response: ', response);
             localStorage.setItem('token', response.data.token);
-
             // redirect to welcome page
-
+            if (localStorage.getItem('token')){
+                // console.log(props);
+                props.history.push("/welcome")
+            };
         })
         // to log the error if request fails
         .catch(error => {
@@ -41,6 +45,8 @@ export default function Login () {
     }
 
     return (
+        <div className="absolute">
+            <img width="609px" height="570px" className="z-index" src={RocketMan}></img>
         <form className='login-form' onSubmit={login}>
             
             <h3> Please login </h3>
@@ -67,5 +73,6 @@ export default function Login () {
             
             
         </form>
+        </div>
     )
 }

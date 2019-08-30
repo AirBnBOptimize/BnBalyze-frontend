@@ -9,7 +9,7 @@ const Header = (props) => {
             <nav>
                 <div className="leftNav"><Link to="/"><h2>BnBalyze</h2></Link></div>
                 <div className="rightNav">
-                    <Link to="/howitworks"><h2>How it Works</h2></Link>
+                    <a href="#howitworks"><h2>How it Works</h2></a>
                     <Link 
                     id="updateButton"
                     onClick={()=>{
