@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Property from "./Property";
-// import "./PropertyList.scss";
+import "./PropertyList.scss";
 import { Container } from 'semantic-ui-react'
 
 export default function PropertyList() {
