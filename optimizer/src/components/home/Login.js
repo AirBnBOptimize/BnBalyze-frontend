@@ -61,11 +61,12 @@ export default function Login (props) {
                 <input type='password' name='password' value={credentials.password} onChange={handleChange} />
             </div>
 
-            <button> Login </button>
+            <button className="login-button"> Login </button>
            
           <div className='redirect'>
-            No Account? 
-            <Link to='/new-user'> Sign up </Link> 
+            <p>No Account?</p>
+            
+            <Link className="linking" to='/register'> Sign up </Link> 
             </div>
 
             {/* link to signup */}

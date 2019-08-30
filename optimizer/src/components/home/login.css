@@ -4,10 +4,10 @@
   display: flex;
   position:relative;
   flex-direction: column;
-
+  height: 400px;
   margin: 0 auto;
   margin-top: 110px;
-  width: 40%; 
+  width: 37%; 
   box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   align-items: center;
@@ -62,4 +62,37 @@
   .redirect a{
     z-index: 19;
     color: white;
+    font-size: 14px;
+  }
+
+  .login-button{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background: rgb(255, 255, 255);
+    color: rgb(255, 90, 95);
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    width: 130px;
+    border: 5px solid rgb(255, 90, 95, .95);
+  }
+
+  .login-button:hover{
+    cursor: pointer;
+    border: 5px solid rgb(227, 67, 72);
+  }
+
+  .linking{
+    line-height: 30px;
+    background-color: rgb(227, 67, 72);
+    padding: 2px;
+    border-radius: 10px;
+    width: 130px;
+  }
+
+  p{
+    font-size: 15px;
+    line-height: 18px;
   }

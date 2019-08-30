@@ -53,11 +53,11 @@ export default function Register(props) {
             <input type='password' name='password' value={credentials.password} onChange={handleChange} />
         </div>
 
-        <button> Register </button>
+        <button className="login-button"> Register </button>
        
       <div className='redirect'>
-        Already Have an Account? 
-        <Link to='/sign-in'> Sign in </Link> 
+        <p>Have an Account?</p> 
+        <Link className="linking" to='/login'> Sign in </Link> 
         </div>
 
         {/* link to signup */}
