@@ -55,7 +55,7 @@ export default function Register() {
                 </div>
                 <div className="field">
                     <div className="ui checkbox">
-                        <input type="checkbox" tabindex="0" className="hidden" />
+                        <input type="checkbox" tabIndex="0" className="hidden" />
                         <label>I agree to the Terms and Conditions</label>
                     </div>
                 </div>

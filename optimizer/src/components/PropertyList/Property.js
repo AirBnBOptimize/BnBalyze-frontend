@@ -44,7 +44,7 @@ const Property = (props) => {
 
     </Card.Content>
     <Card.Content className="property-card" extra>
-      <a>
+      <a href="#">
         {/* App Rating Section */}
             <Icon name='star' />
         Reviews: {props.reviews}
