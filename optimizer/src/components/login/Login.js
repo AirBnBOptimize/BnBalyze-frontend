@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './login.css';
-import PropertyList from '../propertyList/PropertyList';
-
 
 export default function Login (props) {
 
@@ -24,7 +22,6 @@ export default function Login (props) {
 
         // to get the token from the server
         axios
-            // .post("https://airbnboptimalprice-backend.herokuapp.com/auth/login", credentials)
             .post("https://bnbalyze.herokuapp.com/auth/login", credentials)
 
         // to save the token if the request is successfull 
@@ -33,7 +30,6 @@ export default function Login (props) {
             localStorage.setItem('token', response.data.token);
             // redirect to welcome page
             if (localStorage.getItem('token')){
-                // console.log(props);
                 props.history.push("/welcome")
             };
         })
@@ -64,11 +60,6 @@ export default function Login (props) {
             No Account? 
             <Link to='/new-user'> Sign up </Link> 
             </div>
-
-            {/* link to signup */}
-            {/* <button> <h3> No Account? Sign Up </h3> </button> */}
-            
-            
         </form>
     )
 }
