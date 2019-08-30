@@ -5,7 +5,7 @@ import {neighborhood} from '../../utilities/neighborhood.js';
 import {roomType} from '../../utilities/roomType.js';
 import "./addPropertyForm.scss";
 
- function addPropertyForm(values,status) {
+ function addPropertyForm(values,status, props) {
 
     const hood_dict = {'Friedrichshain-Kreuzberg': 1,
     'Mitte': 2,
@@ -115,7 +115,7 @@ const AddPropertyForm = withFormik({
         current_price: current_price || null
       };
     },
-    handleSubmit(values, { resetForm, setStatus }) {
+    handleSubmit(values, { props, resetForm, setStatus }, history) {
         const DSvalues={...values};
         DSvalues.neighborhood=neighborhood(values.neighborhood);
         DSvalues.room_type=roomType(values.room_type);
@@ -146,6 +146,7 @@ const AddPropertyForm = withFormik({
                 console.log("Hello");
                 // setStatus(res.data);
                 console.log("Data",res.data);
+                props.history.push("/welcome")
             })
             .catch(err => {
                 console.log("ERR",err); // There was an error creating the data and logs to console
