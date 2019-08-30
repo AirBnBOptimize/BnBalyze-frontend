@@ -9,7 +9,7 @@ const HowItWorks = () => {
         <section>
             <div className="marketingContent" id="howitworks">
                 <div className="contentIcon">
-                    <FontAwesomeIcon icon={faCalculator} className="icon" />
+                    <FontAwesomeIcon icon={faCalculator} className="icon margin" />
                 </div>
                 <div className="blurb">
                     <h2>Deep Data Integration</h2>
@@ -18,7 +18,7 @@ const HowItWorks = () => {
             </div>
             <div className="roiContent">
                 <div className="contentIcon">
-                    <FontAwesomeIcon icon={faDollarSign} className="icon" />      
+                    <FontAwesomeIcon icon={faDollarSign} className="icon margin" />      
                 </div>
                 <div className="blurb">
                     <h2>Optimize ROI%</h2>
@@ -28,7 +28,7 @@ const HowItWorks = () => {
             </div>
             <div className="occupancyContent">
                 <div className="contentIcon">
-                    <FontAwesomeIcon icon={faHotel} className="icon" />
+                    <FontAwesomeIcon icon={faHotel} className="icon margin" />
                 </div>
                 <div className="blurb">
                     <h2>Increase Occupancy</h2>

@@ -41,6 +41,7 @@
     border-radius: 0.5rem;
     width: 10rem;
     height: 1rem;
+    padding: 4px;
   }
 
   .login-form button{

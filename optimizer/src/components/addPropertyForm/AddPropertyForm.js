@@ -24,7 +24,7 @@ import "./addPropertyForm.scss";
 
     return (
         <div className="formDiv">
-        <h2> Add a Property </h2>
+        <h2 className="margin-top"> Add a Property </h2>
         <Form className='add-property-form'>
         <div className='title' key=""> 
              Title 
