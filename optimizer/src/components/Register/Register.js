@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import '../../components/home/login.css';
 import RocketMan from '../../img/RocketMan.png'
 
-export default function Register() {
+export default function Register(props) {
     const [credentials, setCredentials] = useState({
         username: '',
         password: ''
@@ -26,6 +26,10 @@ export default function Register() {
 
             let res = await axios.post('https://bnbalyze.herokuapp.com/auth/register', credentials, headers);
             localStorage.setItem('token', res.data.payload);
+            if (localStorage.getItem('token')){
+                // console.log(props);
+                props.history.push("/login")
+            };
             console.log(res);
         } catch (err) {
             console.error(err.message);

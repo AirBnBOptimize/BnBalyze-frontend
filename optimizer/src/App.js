@@ -22,7 +22,7 @@ function App() {
             if(localStorage.getItem('token')){
               return(<Header  {...props} loginLink="/logout" loginText="Logout"/>)
             } else if(props.location.pathname==="/login"){
-              return(<Header  {...props} loginLink="/new-user" loginText="Register" />)
+              return(<Header  {...props} loginLink="/register" loginText="Register" />)
             } else {
               return(<Header  {...props} />)
             }
@@ -32,7 +32,7 @@ function App() {
       </Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/logout" component={Home} />
-        <Route exact path='/new-user' component={Register} />
+        <Route exact path='/register' component={Register} />
         <Route path="/login" component={Login} />
         <Route exact path="/" component={HowItWorks} />
         <Route path="/welcome" component={WelcomePage} />
