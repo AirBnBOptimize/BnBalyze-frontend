@@ -40,6 +40,7 @@ function App() {
         <Route exact path="/propertyInfo/:id" component={PropertyInfo} />
         {/* <Route exact path="/properties" component={PropertyList} /> */}
         <Route exact path="/addproperty" component={AddPropertyForm} />
+        <Route exact path="/addproperty/:id" component={AddPropertyForm} />
 
     </div>
   )
