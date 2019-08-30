@@ -36,9 +36,9 @@ function App() {
         <Route exact path='/new-user' component={Register} />
         <Route path="/login" component={Login} />
         <Route path="/howitworks" component={HowItWorks} />
-        {/* <Route path="/welcome" component={WelcomePage} /> */}
+        <Route path="/welcome" component={WelcomePage} />
         <Route exact path="/propertyInfo/:id" component={PropertyInfo} />
-        {/* <Route exact path="/properties" component={PropertyList} /> */}
+        <Route exact path="/properties" component={PropertyList} />
         <Route exact path="/addproperty" component={AddPropertyForm} />
         <Route exact path="/addproperty/:id" component={AddPropertyForm} />
 
