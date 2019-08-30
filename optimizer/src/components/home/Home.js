@@ -32,10 +32,6 @@ const  Home= (props) => {
                     <FontAwesomeIcon icon={faHotel} className="icon" /></Link>
                 </div>
             </section>
-                        {/* Bogus links to show to a property */}
-                        <a href="/propertyInfo/1">Test Link: Go to Property</a><br/>
-                        <a href="/welcome">Show user welcome page</a>
-                        {/*   temp for testing */}
                         
         </main>
   
