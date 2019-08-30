@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './login.css';
+import RocketMan from '../../img/RocketMan.png'
 import PropertyList from '../propertyInfo/PropertyList';
 
 
@@ -44,6 +45,8 @@ export default function Login (props) {
     }
 
     return (
+        <div className="absolute">
+            <img width="609px" height="570px" className="z-index" src={RocketMan}></img>
         <form className='login-form' onSubmit={login}>
             
             <h3> Please login </h3>
@@ -70,5 +73,6 @@ export default function Login (props) {
             
             
         </form>
+        </div>
     )
 }
