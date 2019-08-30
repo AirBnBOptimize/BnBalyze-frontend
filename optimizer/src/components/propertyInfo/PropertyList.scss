@@ -16,7 +16,7 @@ h6 {
     margin: 0;
     padding: 0;
     color: #484848;
-    font-size: 0.8rem;
+    font-size: 0.74rem;
 }
 
 /* Property Card */
@@ -34,7 +34,7 @@ h6 {
     line-height: 0.6cm;
     font-size: 0.8rem;
     font-weight: bold;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
     color:#484848;
     margin: 25px auto;
     padding: 210px 55px 0% 55px;
@@ -83,7 +83,7 @@ h6 {
         background-color: #FF5A5F;
         border-radius: 20px;
         margin: 0px 20px 10px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.19);
         }
         .buttonBox {
             display: flex;
@@ -95,7 +95,7 @@ h6 {
             background-color: #FF5A5F;
             border-radius: 20px;
             margin: 0px 20px 10px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.19);
             }
 
         .title {

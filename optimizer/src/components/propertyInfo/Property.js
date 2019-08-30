@@ -22,11 +22,11 @@ const Property = (props) => {
 
       <div className="pricecompare">
         <div className="pricebox-container">
-          <h6>Current</h6>
+          <h6>Current Price</h6>
           <div className="pricebox"><p className="price">${props.current_price} / night</p></div>
         </div>
         <div className="pricebox-container">
-          <h6>Recommendation</h6>
+          <h6>Recommended</h6>
           <div className="pricebox"><p className="price">${props.recommendation_price} / night</p></div>
         </div>
       </div>
