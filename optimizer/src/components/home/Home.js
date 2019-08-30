@@ -19,7 +19,7 @@ const  Home= (props) => {
                     <h1>Analyze your BnB Listings<br/>with pinpoint geographic analytics</h1>
                 </div>
                 <div className="startButton">
-                <Link to="/new-user">Start Today</Link>
+                <Link to="/register">Start Today</Link>
                 </div>
             </section>
             <section className="bottomContent">
