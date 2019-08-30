@@ -1,68 +1,59 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Proposal
 
-## Available Scripts
+Our app is useful to get the best price for your AirBnB rental depending on the area you're in and the accomodations you're offering. Our brilliant Data Science team dug through over seventeen thousand records to bring accurate results to any inquiry, in Germany. Our mission statement, should we have chosen to accept it, is to help users get the best value from their AirBnB accounts.
 
-In the project directory, you can run:
+# Features
 
-### `npm start`
+MVP would clearly be to give a user the best asking price for a given property they intend to list on AirBnB. In future we'd like to expand our service outside of Germany and also tie tighter to the actual listings entered without as much user input.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- What do the top 3 similar apps do for their users?
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+There are similar apps? Certainly not ones as accurate. Our Data Scientists are the bees knees.
 
-### `npm test`
+# Frameworks - Libraries
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- What 3rd party frameworks/libraries are you considering using?
 
-### `npm run build`
+We used Formik for forms, well, I did. Semantic UI for styles, FontAwesome for icons, React is the main library of course, but hooks are key as well.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Do APIs require you to contact its maintainer to gain access?
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Sometimes they do. I mean, not for us, we're cool. Just in general, maintainers are very lonely people.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Are you required to pay to use the API?
 
-### `npm run eject`
+Nah, I told them you'd pay. LOL.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Have you considered using Apple Frameworks? (MapKit, Healthkit, ARKit?)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I've considered taking pottery classes, but here we are.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Target Audience
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Who is your target audience? Be specific.
 
-## Learn More
+People with AirBnBable properties named Brian.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- What feedback have you gotten from potential users?
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+How were we supposed to reach these 'potential users'? We haven't marketed it, we've been busy building it and all.
 
-### Code Splitting
+- Have you validated the problem and your solution with your target audience? How?
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Yes, the focus groups we set up in Galviston, Winnipeg and Albuquerque were instrumental in our ultimate solution for this problem. They all say "you're awesome".
 
-### Analyzing the Bundle Size
+# Grading Rubric Checklist for J.Sonnichsen:
+- MVP work - Project should incorporate all of the listed MVP features
+I built my agreed features, then helped the team finish off theirs to finish a presentable product.
+ 
+- Team Work Score 
+Pair programmed with nearly every member of the team, usually multiple times. Attended all called meetings by PM or React Devs. Helped with git consolidation early on. Still available to help nearly any late night on #lambdabynight.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- Sprint 1-Applied JavaScript
+I used events in JSX to push react functionality, but spent a lot of time covering necessary functions rather than incorporate animations.
 
-### Making a Progressive Web App
+- Sprint 2-Intro to React
+Used useState and useEffect like whoah, learned useContext, but didn't get to implement it in favor of finishing a presentable app and not taking MVP from a unit 3 react dev.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Sprint 3- SPA
+Used axios and route to great effect. Usage of finer points of route confused a number of people. Not sure I did it right, but it works and that counts. Nested doesn't begin to cover it. I've got container vs presentational components by the score.
