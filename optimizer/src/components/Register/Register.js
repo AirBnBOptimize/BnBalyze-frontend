@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 import './Register.scss';
 
-export default function Register() {
+export default function Register(props) {
     const [credentials, setCredentials] = useState({
         username: '',
         password: ''
@@ -24,8 +24,22 @@ export default function Register() {
             };
 
             let res = await axios.post('https://bnbalyze.herokuapp.com/auth/register', credentials, headers);
-            localStorage.setItem('token', res.data.payload);
-            console.log(res);
+            console.log("WTF",res,res.status);
+            if (res.status===201) {
+                
+                axios
+                .post("https://bnbalyze.herokuapp.com/auth/login", credentials)
+                .then(response => {
+                    console.log('getting the following response: ', response);
+                    localStorage.setItem('token', response.data.token);
+                    if (localStorage.getItem('token')){
+                    props.history.push("/welcome")
+                    };
+                })
+                .catch(error => {
+                console.log('unable to login: ', error);
+                });
+            }
         } catch (err) {
             console.error(err.message);
         }
@@ -60,7 +74,7 @@ export default function Register() {
                     </div>
                 </div>
                 <button className="ui button" type="submit">Submit</button>
-                <p>Already have an account? <Link to="/sign-in">Sign In</Link></p>
+                <p>Already have an account? <Link to="/login">Sign In</Link></p>
             </form>
         </div>
     )
