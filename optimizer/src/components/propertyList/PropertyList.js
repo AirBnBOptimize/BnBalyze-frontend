@@ -37,7 +37,6 @@ export default function PropertyList() {
               cable_tv={id.cable_tv}
               washer={id.washer}
               kitchen={id.kitchen}
-              recommendation_price={id.recommendation_price}
             />
             </div>
             ))}
