@@ -3,68 +3,27 @@ import './propertyInfo.scss';
 import axios from 'axios';
 
 const PropertyInfo = (props) => {
-    const data={'neighborhood': 2
-    , 'room_type': 2
-    , 'accommodates':8
-    , 'bedrooms': 3
-    , 'bathrooms': 4
-    , 'number_of_reviews':30
-    , 'wifi':1
-    , 'cable_tv':0
-    , 'washer':0
-    , 'kitchen':1};
-
-const neighborhood=(hood)=>{
-    const lookup={'Friedrichshain-Kreuzberg': 1,
-    'Mitte': 2,
-    'Pankow': 3,
-    'Neukölln': 4,
-    'Charlottenburg-Wilm.': 5,
-    'Tempelhof - Schöneberg': 6,
-    'Lichtenberg': 7,
-    'Treptow - Köpenick': 8,
-    'Steglitz - Zehlendorf': 9,
-    'Reinickendorf': 10,
-    'Marzahn - Hellersdorf':11,
-    'Spandau': 12,
-    1:'Friedrichshain-Kreuzberg',
-    2:'Mitte',
-    3:'Pankow',
-    4:'Neukölln',
-    5:'Charlottenburg-Wilm.',
-    6:'Tempelhof - Schöneberg',
-    7:'Lichtenberg',
-    8:'Treptow, - Köpenick',
-    9:'Steglitz, - Zehlendorf',
-    10:'Reinicken,dorf',
-    11:'Marzahn - Hellersdorf',
-    12:'Spandau'}
-    
-    return lookup[hood];
-}
-
-const roomType=(room)=>{
-    const lookup={
-        1:'Entire home/apt',
-        2:'Private room',
-        3:'Shared room',
-        'Entire home/apt':1,
-        'Private room':2,
-        'Shared room':3
-    }
-    return lookup[room];
-}
-    const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJ1c2VybmFtZSI6IkFudGhvbnkxIiwiaWF0IjoxNTY3MDA5NTcwLCJleHAiOjE1NjcwOTU5NzB9.gSKEmTp3MVWILSbhEh99TSWa9aSgmGksiFRKcKAS-dg";
-
+    //Static Data
+    // const data={'neighborhood': 2
+    // , 'room_type': 2
+    // , 'accommodates':8
+    // , 'bedrooms': 3
+    // , 'number_of_reviews':30
+    // , 'wifi':1
+    // , 'cable_tv':0
+    // , 'washer':0
+    // , 'kitchen':1};
+    const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo1LCJ1c2VybmFtZSI6IkFudGhvbnkxMiIsImlhdCI6MTU2NzA5NzA1MiwiZXhwIjoxNTY3MTgzNDUyfQ.Isl1Ku_z6RQAW-M06lVQZ_hBXJ5HkuGqPOHZUnbabVI";
+    localStorage.setItem('token',token);
 
     const [property,setProperty]=useState();
 
     useEffect(()=>{
-        console.log("PI Props", props,props.match.params.id);
+        console.log("PI Props", props,props.match.params.id,localStorage.getItem('token'));
         // axiosWithAuth
-        // localStorage.getItem(‘token’)
+        
         axios
-        .get('https://bnbalyze.herokuapp.com/properties',{headers: {Authorization:token}})
+        .get('https://bnbalyze.herokuapp.com/properties',{headers: {Authorization:localStorage.getItem('token')}})
         .then(res => {
             console.log("DATA",res.data[props.match.params.id]);
             setProperty(res.data[props.match.params.id]);
@@ -73,10 +32,13 @@ const roomType=(room)=>{
             console.error('Server Error', err);
             console.log(err);
         });
+
+        //Post
+        
     },[props]);
 
     if (!property){return "Loading"};
-
+    
     return ( 
         <div className="propertyInfo">
             <div className="propertyBox">
