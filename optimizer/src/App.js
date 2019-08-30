@@ -15,7 +15,6 @@ import AddPropertyForm from './components/addPropertyForm/AddPropertyForm.js';
 function App() {
   return (
     <div className="App">
-
       <Switch>
         <Route
           render={(props) => {
