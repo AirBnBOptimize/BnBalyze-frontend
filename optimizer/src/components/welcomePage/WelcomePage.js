@@ -1,6 +1,6 @@
 import React from 'react';
 import './welcomePage.scss';
-import PropertyList from '../propertyList/PropertyList.js';
+import PropertyList from '../propertyInfo/PropertyList.js';
 
 const  WelcomePage= (props) => {
     return (

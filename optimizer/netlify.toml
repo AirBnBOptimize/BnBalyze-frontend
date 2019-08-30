@@ -1,0 +1,11 @@
+[build]
+ command = "yarn build"
+ functions = "functions"
+ publish = "optimizer/build"
+ base = "optimizer"
+
+
+ [[redirects]]
+   from = "/*"
+   to = "/index.html"
+   status = 200
