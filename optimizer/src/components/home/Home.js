@@ -36,7 +36,7 @@ const  Home= (props) => {
                         <a href="/propertyInfo/1">Test Link: Go to Property</a><br/>
                         <a href="/welcome">Show user welcome page</a>
                         {/*   temp for testing */}
-                        <PredictPropertyPrice/>
+                        
         </main>
   
 

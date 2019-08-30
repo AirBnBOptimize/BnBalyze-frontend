@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './login.css';
 
-
-export default function Login () {
+export default function Login (props) {
 
     // to hold the state
     const [credentials, setCredentials] = useState({username: '', password: ''});
@@ -23,16 +22,16 @@ export default function Login () {
 
         // to get the token from the server
         axios
-            // .post("https://airbnboptimalprice-backend.herokuapp.com/auth/login", credentials)
             .post("https://bnbalyze.herokuapp.com/auth/login", credentials)
 
         // to save the token if the request is successfull 
         .then(response => {
             console.log('getting the following response: ', response);
             localStorage.setItem('token', response.data.token);
-
             // redirect to welcome page
-
+            if (localStorage.getItem('token')){
+                props.history.push("/welcome")
+            };
         })
         // to log the error if request fails
         .catch(error => {
@@ -59,13 +58,8 @@ export default function Login () {
            
           <div className='redirect'>
             No Account? 
-            <Link to='/signup'> Sign up </Link> 
+            <Link to='/new-user'> Sign up </Link> 
             </div>
-
-            {/* link to signup */}
-            <button> <h3> No Account? Sign Up </h3> </button>
-            
-            
         </form>
     )
 }

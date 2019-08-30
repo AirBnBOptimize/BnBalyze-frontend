@@ -11,10 +11,10 @@ import PropertyList from "./components/propertyList/PropertyList.js";
 import WelcomePage from './components/welcomePage/WelcomePage.js';
 import AddPropertyForm from './components/addPropertyForm/AddPropertyForm.js';
 
+
 function App() {
   return (
     <div className="App">
-
       <Switch>
         <Route
           render={(props) => {
@@ -39,6 +39,7 @@ function App() {
         <Route exact path="/propertyInfo/:id" component={PropertyInfo} />
         <Route exact path="/properties" component={PropertyList} />
         <Route exact path="/addproperty" component={AddPropertyForm} />
+        <Route exact path="/addproperty/:id" component={AddPropertyForm} />
 
     </div>
   )

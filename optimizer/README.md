@@ -1,68 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Proposal
 
-## Available Scripts
+Our app is useful to get the best price for your AirBnB rental depending on the area you're in and the accomodations you're offering. Our brilliant Data Science team dug through over seventeen thousand records to bring accurate results to any inquiry. Our mission statement is to help users get the best value from their AirBnB accounts.
 
-In the project directory, you can run:
+# Features
 
-### `npm start`
+MVP would be to give a user the best asking price for a given property they intend to list on AirBnB. In future we'd like to expand our service outside of Germany and also tie tighter to the actual listings entered without as much user input.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Frameworks - Libraries
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+- What 3rd party frameworks/libraries are you considering using?
 
-### `npm test`
+We used Formik for forms. Semantic UI for styles. FontAwesome for icons. React is the main library of course, but hooks are key as well.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Do APIs require you to contact its maintainer to gain access?
+- Are you required to pay to use the API?
 
-### `npm run build`
+No, the information is freely available.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Target Audience
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+- Who is your target audience? Be specific.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+People with AirBnBable properties.
 
-### `npm run eject`
+# Grading Rubric Checklist for J.Sonnichsen:
+- MVP work - Project should incorporate all of the listed MVP features
+I built my agreed upon features, then helped the team finish off theirs to finish a presentable product.
+ 
+- Team Work Score 
+Pair programmed with nearly every member of the team, usually multiple times. Attended all called meetings by PM or React Devs. Helped with git instruction and merges to resolve conflicts. Still available to help nearly any late night on #lambdabynight.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Sprint 1-Applied JavaScript
+I used events in JSX to push react functionality, but spent most of my time covering necessary functions to make a complete app rather than incorporate animations.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Sprint 2-Intro to React
+Used useState and useEffect, learned useContext, but didn't get to implement it in favor of finishing the app.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Sprint 3- SPA
+Used axios and route to great effect. Not sure I did it right, but it works and that counts. Used nested routes and passed values through them with the render prop.
