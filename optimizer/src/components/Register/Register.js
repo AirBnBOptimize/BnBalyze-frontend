@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-
-import './Register.scss';
+import '../../components/home/login.css';
+import RocketMan from '../../img/RocketMan.png'
 
 export default function Register() {
     const [credentials, setCredentials] = useState({
@@ -15,6 +15,7 @@ export default function Register() {
     };
 
     const register = async evt => {
+        console.log(credentials)
         evt.preventDefault();
         try {
             let headers = {
@@ -32,36 +33,34 @@ export default function Register() {
 
     }
     return (
-        <div className="register-form">
-            Please Register
-            <form className="ui form" onSubmit={register}>
-                <div className="field">
-                    <label>Username: </label>
-                    <input
-                        type="text"
-                        name="username"
-                        value={credentials.username}
-                        onChange={evt => handleChange(evt)}
-                        placeholder="Username" />
-                </div>
-                <div className="field">
-                    <label>Password: </label>
-                    <input
-                        type="password"
-                        name="password"
-                        value={credentials.password}
-                        onChange={evt => handleChange(evt)}
-                        placeholder="Password" />
-                </div>
-                <div className="field">
-                    <div className="ui checkbox">
-                        <input type="checkbox" tabindex="0" className="hidden" />
-                        <label>I agree to the Terms and Conditions</label>
-                    </div>
-                </div>
-                <button className="ui button" type="submit">Submit</button>
-                <p>Already have an account? <Link to="/sign-in">Sign In</Link></p>
-            </form>
+        <div className="absolute">
+        <img width="609px" height="570px" className="z-index" src={RocketMan}></img>
+    <form className='login-form' onSubmit={register}>
+        
+        <h3> Please Register </h3>
+
+        <div className='element-login-form'>
+            Username
+            <input type='text' name='username' value={credentials.username} onChange={handleChange} />
+        </div>
+
+        <div className='element-login-form'>
+            Password
+            <input type='password' name='password' value={credentials.password} onChange={handleChange} />
+        </div>
+
+        <button> Register </button>
+       
+      <div className='redirect'>
+        Already Have an Account? 
+        <Link to='/sign-in'> Sign in </Link> 
+        </div>
+
+        {/* link to signup */}
+        {/* <button> <h3> No Account? Sign Up </h3> </button> */}
+        
+        
+    </form>
         </div>
     )
 }
