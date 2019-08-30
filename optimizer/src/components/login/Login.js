@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './login.css';
+import PropertyList from '../propertyList/PropertyList';
 
 
-export default function Login () {
+export default function Login (props) {
 
     // to hold the state
     const [credentials, setCredentials] = useState({username: '', password: ''});
@@ -30,9 +31,11 @@ export default function Login () {
         .then(response => {
             console.log('getting the following response: ', response);
             localStorage.setItem('token', response.data.token);
-
             // redirect to welcome page
-
+            if (localStorage.getItem('token')){
+                // console.log(props);
+                props.history.push("/welcome")
+            };
         })
         // to log the error if request fails
         .catch(error => {
